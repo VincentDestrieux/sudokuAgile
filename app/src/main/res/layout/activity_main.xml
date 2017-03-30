@@ -5,7 +5,6 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="com.miage.master.myapplication.MainActivity"
-android:background="@drawable/sudoku_background"
 tools:layout_editor_absoluteY="81dp"
 tools:layout_editor_absoluteX="0dp">
 
@@ -23,7 +22,7 @@ tools:layout_editor_absoluteX="0dp">
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.462"
-        android:onClick="difficulty   "/>
+        android:onClick="difficulty"/>
 
     <Button
         android:id="@+id/Quitter"
