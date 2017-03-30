@@ -7,43 +7,44 @@
     tools:context="com.miage.master.myapplication.Niveau">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonTresFacile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Difficile"
+        android:text="@string/tresFacile"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <Button
+        android:id="@+id/buttonFacile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/facile"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <Button
+        android:id="@+id/buttonMoyen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moyen"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="198dp" />
+
+    <Button
+        android:id="@+id/buttonDifficile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficile"
         tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="272dp"
         />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonTresDifficile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Moyen"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="198dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Facile"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="132dp" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Très Difficile"
+        android:text="@string/tresDifficile"
         tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="340dp" />
-   
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Très Facile"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="66dp" />
+
 </android.support.constraint.ConstraintLayout>
