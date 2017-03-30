@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".grille" />
+        <activity android:name=".Grille" />
         <activity android:name=".Niveau"></activity>
     </application>
 
