@@ -8,32 +8,33 @@
 
     <Button
         android:id="@+id/buttonTresFacile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
         android:text="@string/tresFacile"
         tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="66dp" />
 
     <Button
         android:id="@+id/buttonFacile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
         android:text="@string/facile"
         tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="132dp" />
+        tools:layout_editor_absoluteY="134dp" />
 
     <Button
         android:id="@+id/buttonMoyen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="110dp"
+        android:layout_height="50dp"
         android:text="@string/moyen"
         tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="198dp" />
 
     <Button
         android:id="@+id/buttonDifficile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
         android:text="@string/difficile"
         tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="272dp"
@@ -41,8 +42,8 @@
 
     <Button
         android:id="@+id/buttonTresDifficile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
         android:text="@string/tresDifficile"
         tools:layout_editor_absoluteX="131dp"
         tools:layout_editor_absoluteY="340dp" />
