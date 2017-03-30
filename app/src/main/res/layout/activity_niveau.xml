@@ -11,16 +11,26 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:text="@string/tresFacile"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="66dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162"
+        />
 
     <Button
         android:id="@+id/buttonFacile"
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:text="@string/facile"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="134dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.262"
+       />
 
     <Button
         android:id="@+id/buttonMoyen"
@@ -28,16 +38,26 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:text="@string/moyen"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="198dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362"
+        />
 
     <Button
         android:id="@+id/buttonDifficile"
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:text="@string/difficile"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="272dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462"
+
         />
 
     <Button
@@ -45,7 +65,12 @@
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:text="@string/tresDifficile"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="340dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562"
+ />
 
 </android.support.constraint.ConstraintLayout>

@@ -36,8 +36,8 @@ tools:layout_editor_absoluteX="0dp">
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintVertical_bias="0.647"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintVertical_bias="0.600"
         android:onClick="exitApp"
         />
 </android.support.constraint.ConstraintLayout>
