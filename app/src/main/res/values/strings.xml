@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Sudoku</string>
-    <string name="demarrer"></string>
+    <string name="demarrer">Démarrer la partie</string>
+    <string name="quitter">Quitter</string>
     <string name="tresFacile">Très Facile</string>
     <string name="facile">Facile</string>
     <string name="moyen">Moyen</string>
