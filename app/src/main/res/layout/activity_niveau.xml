@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/buttonTresFacile"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
         android:text="@string/tresFacile"
         android:textColor="#000000"
         android:background="@drawable/bouton_tres_facile"
@@ -24,8 +24,8 @@
 
     <Button
         android:id="@+id/buttonFacile"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
         android:text="@string/facile"
         android:textColor="#000000"
         android:background="@drawable/bouton_facile"
@@ -39,10 +39,11 @@
 
     <Button
         android:id="@+id/buttonMoyen"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
         android:text="@string/moyen"
-        android:background="#E8E3FF"
+        android:textColor="#000000"
+        android:background="@drawable/bouton_moyen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -53,10 +54,11 @@
 
     <Button
         android:id="@+id/buttonDifficile"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
         android:text="@string/difficile"
-        android:background="#F6D5FF"
+        android:textColor="#000000"
+        android:background="@drawable/bouton_difficile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -68,10 +70,11 @@
 
     <Button
         android:id="@+id/buttonTresDifficile"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
         android:text="@string/tresDifficile"
-        android:background="#FFCCFF"
+        android:textColor="#000000"
+        android:background="@drawable/bouton_tres_difficile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
