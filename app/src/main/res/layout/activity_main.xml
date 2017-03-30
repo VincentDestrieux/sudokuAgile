@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
@@ -9,25 +9,28 @@ android:background="@drawable/sudoku_background"
 tools:layout_editor_absoluteY="81dp"
 tools:layout_editor_absoluteX="0dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+<Button
+    android:id="@+id/boutonStart"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Démarer la partie"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.502"
+    app:layout_constraintVertical_bias="0.447" />
 
-        <Button
-            android:id="@+id/boutonStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Démarer la partie" />
-
-        <Button
-            android:id="@+id/Quitter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-
-            android:text="Quitter" />
-    </LinearLayout>
-
-</RelativeLayout>
+<Button
+    android:id="@+id/Quitter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Quitter"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.502"
+    app:layout_constraintVertical_bias="0.647"
+    />
+</android.support.constraint.ConstraintLayout>
