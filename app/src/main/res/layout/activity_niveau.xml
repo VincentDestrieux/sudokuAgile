@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.100"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="retour">
+        android:onClick="start">
 
         <ImageView
             android:id="@+id/imageTresFacile"
