@@ -11,6 +11,8 @@ public class Grille extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grille);
+        int[][] Sudoku = new int[9][9];
+        //EditText text = findViewById(R.id)
 
     }
 
