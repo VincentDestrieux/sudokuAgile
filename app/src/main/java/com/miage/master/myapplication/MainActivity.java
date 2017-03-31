@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void exitApp(View v){
         finish();
     }
