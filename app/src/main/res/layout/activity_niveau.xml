@@ -44,10 +44,11 @@
             android:id="@+id/imageTresFacile"
             android:layout_width="50dp"
             android:layout_height="fill_parent"
-            android:src="@drawable/tmp" />
+            android:src="@drawable/etoile1"
+            android:contentDescription="@string/etoile" />
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
@@ -77,10 +78,11 @@
             android:id="@+id/imageFacile"
             android:layout_width="50dp"
             android:layout_height="fill_parent"
-            android:src="@drawable/tmp" />
+            android:src="@drawable/etoile2"
+            android:contentDescription="@string/etoile" />
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
@@ -110,10 +112,11 @@
             android:id="@+id/imageMoyen"
             android:layout_width="50dp"
             android:layout_height="fill_parent"
-            android:src="@drawable/tmp" />
+            android:src="@drawable/etoile3"
+            android:contentDescription="@string/etoile" />
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
@@ -143,10 +146,11 @@
             android:id="@+id/imageDifficile"
             android:layout_width="50dp"
             android:layout_height="fill_parent"
-            android:src="@drawable/tmp" />
+            android:src="@drawable/etoile4"
+            android:contentDescription="@string/etoile" />
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
@@ -176,10 +180,11 @@
             android:id="@+id/imageTresDifficile"
             android:layout_width="50dp"
             android:layout_height="fill_parent"
-            android:src="@drawable/tmp" />
+            android:src="@drawable/etoile5"
+            android:contentDescription="@string/etoile" />
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
