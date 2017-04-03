@@ -4,23 +4,25 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Grille extends AppCompatActivity {
-    EditText test;
-    int i=0;
+
+    List<EditText> textList = new ArrayList<EditText>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grille);
-        for(i=0;i<81;i++) {
-            test = (EditText) findViewById((R.id.Case1_1)+i);
-            String t = String.valueOf(i);
-            test.setText(t);
+        for(int i=0;i<81;i++){
+            textList.add((EditText)findViewById((R.id.Case1_1)+i));
+            textList.get(i).setText(toString().valueOf(i));
+
         }
     }
 
     public void EditContenu(View v){
-        //  String x =v.getTag().toString();
         int t = v.getId();
         EditText test= (EditText) findViewById(t);
         test.setText("coucou");

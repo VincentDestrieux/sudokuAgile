@@ -3,493 +3,591 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="9"
-    android:rowCount="9">
+    android:rowCount="9" >
 
     <EditText
         android:id="@+id/Case1.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="39dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="33dp"
+        android:layout_height="56dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.4"
-        android:layout_width="wrap_content"
+        android:layout_width="35dp"
         android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:layout_row="0"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"
+        />
 
     <EditText
         android:id="@+id/Case2.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="44dp"
+        android:layout_height="57dp"
         android:onClick="EditContenu"
-        android:text="Name" />
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case2.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case2.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case2.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case2.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case2.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case2.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case2.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case2.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case3.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case4.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case5.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case6.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case7.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case8.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
     <EditText
         android:id="@+id/Case9.9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="EditContenu" />
-
+        android:layout_width="44dp"
+        android:layout_height="57dp"
+        android:onClick="EditContenu"
+        android:textSize="24sp"
+        android:gravity="center"/>
 </GridLayout>
