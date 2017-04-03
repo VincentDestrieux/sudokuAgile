@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pastel"
+    android:background="@drawable/fond1"
     tools:context="com.miage.master.myapplication.Niveau">
 
     <!-- Ancien Format des boutons a garder au cas où
@@ -198,7 +198,6 @@
         android:id="@+id/buttonRetour"
         android:layout_width="45dp"
         android:layout_height="37dp"
-        android:background="@drawable/retour"
         android:onClick="retour"
         />
 
