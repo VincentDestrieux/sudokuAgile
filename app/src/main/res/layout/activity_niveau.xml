@@ -7,12 +7,28 @@
     android:background="@drawable/pastel"
     tools:context="com.miage.master.myapplication.Niveau">
 
-    <Button
+    <!-- Ancien Format des boutons a garder au cas où
+  <Button
+      android:id="@+id/buttonTresFacile"
+      android:layout_width="140dp"
+      android:layout_height="50dp"
+      android:text="@string/tresFacile"
+      android:textColor="#000000"
+      android:background="@drawable/bouton_tres_facile"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.100"
+      />
+      -->
+
+    <LinearLayout
         android:id="@+id/buttonTresFacile"
-        android:layout_width="140dp"
+        android:padding="5dp"
+        android:layout_width="160dp"
         android:layout_height="50dp"
-        android:text="@string/tresFacile"
-        android:textColor="#000000"
         android:background="@drawable/bouton_tres_facile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -20,14 +36,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.100"
-        />
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="start">
 
-    <Button
+        <ImageView
+            android:id="@+id/imageTresFacile"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/etoile1"
+            android:contentDescription="@string/etoile" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:lines="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:text="@string/tresFacile" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/buttonFacile"
-        android:layout_width="140dp"
+        android:padding="5dp"
+        android:layout_width="160dp"
         android:layout_height="50dp"
-        android:text="@string/facile"
-        android:textColor="#000000"
         android:background="@drawable/bouton_facile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -35,14 +70,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.280"
-       />
+        android:clickable="true"
+        android:focusable="true"
+        >
 
-    <Button
+        <ImageView
+            android:id="@+id/imageFacile"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/etoile2"
+            android:contentDescription="@string/etoile" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:lines="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:text="@string/facile" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/buttonMoyen"
-        android:layout_width="140dp"
+        android:padding="5dp"
+        android:layout_width="160dp"
         android:layout_height="50dp"
-        android:text="@string/moyen"
-        android:textColor="#000000"
         android:background="@drawable/bouton_moyen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -50,14 +104,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.460"
-        />
+        android:clickable="true"
+        android:focusable="true"
+        >
 
-    <Button
+        <ImageView
+            android:id="@+id/imageMoyen"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/etoile3"
+            android:contentDescription="@string/etoile" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:lines="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:text="@string/moyen" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/buttonDifficile"
-        android:layout_width="140dp"
+        android:padding="5dp"
+        android:layout_width="160dp"
         android:layout_height="50dp"
-        android:text="@string/difficile"
-        android:textColor="#000000"
         android:background="@drawable/bouton_difficile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -65,15 +138,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.640"
+        android:clickable="true"
+        android:focusable="true"
+        >
 
-        />
+        <ImageView
+            android:id="@+id/imageDifficile"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/etoile4"
+            android:contentDescription="@string/etoile" />
 
-    <Button
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:lines="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:text="@string/difficile" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/buttonTresDifficile"
-        android:layout_width="140dp"
+        android:padding="5dp"
+        android:layout_width="160dp"
         android:layout_height="50dp"
-        android:text="@string/tresDifficile"
-        android:textColor="#000000"
         android:background="@drawable/bouton_tres_difficile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,6 +172,34 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.820"
- />
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+        <ImageView
+            android:id="@+id/imageTresDifficile"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/etoile5"
+            android:contentDescription="@string/etoile" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:lines="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:text="@string/tresDifficile" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonRetour"
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        android:background="@drawable/retour"
+        android:onClick="retour"
+        />
 
 </android.support.constraint.ConstraintLayout>

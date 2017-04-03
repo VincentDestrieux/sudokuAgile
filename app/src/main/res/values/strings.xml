@@ -7,4 +7,5 @@
     <string name="moyen">Moyen</string>
     <string name="difficile">Difficile</string>
     <string name="tresDifficile">Très Difficile</string>
+    <string name="etoile">etoile</string>
 </resources>
