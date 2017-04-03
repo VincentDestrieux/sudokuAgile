@@ -1,7 +1,7 @@
 package com.miage.master.myapplication;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import java.util.ArrayList;
@@ -27,5 +27,5 @@ public class Grille extends AppCompatActivity {
         EditText test= (EditText) findViewById(t);
         test.setText("coucou");
 
-}
+    }
 }
