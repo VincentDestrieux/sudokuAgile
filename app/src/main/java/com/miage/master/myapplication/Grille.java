@@ -25,7 +25,7 @@ public class Grille extends Activity {
     public void EditContenu(View v){
         int t = v.getId();
         EditText test= (EditText) findViewById(t);
-        test.setText("coucou");
+        test.setText("GO");
 
     }
 }
