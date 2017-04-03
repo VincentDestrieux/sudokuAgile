@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Niveau.class);
         startActivity(intent);
     }
-
 
     public void exitApp(View v){
         finish();
