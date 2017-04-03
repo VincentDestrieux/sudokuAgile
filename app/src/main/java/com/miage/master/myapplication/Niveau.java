@@ -17,4 +17,8 @@ public class Niveau extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void retour(View v){
+        finish();
+    }
+
 }
