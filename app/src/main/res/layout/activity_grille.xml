@@ -15,7 +15,7 @@
 
     <EditText
         android:id="@+id/Case1.2"
-        android:layout_width="39dp"
+        android:layout_width="44dp"
         android:layout_height="57dp"
         android:onClick="EditContenu"
         android:textSize="24sp"
@@ -23,16 +23,16 @@
 
     <EditText
         android:id="@+id/Case1.3"
-        android:layout_width="33dp"
-        android:layout_height="56dp"
+        android:layout_width="44dp"
+        android:layout_height="57dp"
         android:onClick="EditContenu"
         android:textSize="24sp"
         android:gravity="center"/>
 
     <EditText
         android:id="@+id/Case1.4"
-        android:layout_width="35dp"
-        android:layout_height="wrap_content"
+        android:layout_width="44dp"
+        android:layout_height="57dp"
         android:onClick="EditContenu"
         android:textSize="24sp"
         android:gravity="center"/>
