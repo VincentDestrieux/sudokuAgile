@@ -7,7 +7,7 @@ import android.widget.EditText;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Grille extends AppCompatActivity {
+public class Grille extends Activity {
 
     List<EditText> textList = new ArrayList<EditText>();
 
