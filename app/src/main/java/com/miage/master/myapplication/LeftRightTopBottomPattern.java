@@ -1,40 +1,21 @@
-public class LeftRightTopBottomPattern implements MovingPattern{
+public class LeftRightTopBottomPattern extends VirtualPattern{
 
-private int caseLeft;
-private int row;
-private int column;
+	public LeftRightTopBottomPattern() {
+		super();
+	}
 
-public LeftRightTopBottomPattern()
-{
-	row = column = 1;
-	caseLeft = 9*9;
-}
-
-@Override
+	@Override
 //Do this with global values
-public PairCoord Next() 
-{
-	if(isOver())
-	{
-		row = column = 1;
-		caseLeft = 9*9;
-	}
-	PairCoord tmp;
-	if(row<10)
-	{
+	public PairCoord Next() {
+		if (isOver()) {
+			row = column = 1;
+			caseLeft = 9 * 9;
+		}
+		PairCoord tmp;
 		caseLeft--;
-		return new PairCoord(row++,column);
-	}
-	else
-	{
-		caseLeft--;
+		if (row < 10)
+			return new PairCoord(row++, column);
 		row = 1;
-		return new PairCoord(row++,++column);
+		return new PairCoord(row++, ++column);
 	}
-}
-
-@Override
-public boolean isOver() {
-	return (caseLeft == 0);
-}
 }
