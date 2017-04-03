@@ -27,5 +27,5 @@ public class Grille extends AppCompatActivity {
         EditText test= (EditText) findViewById(t);
         test.setText("coucou");
 
-    }
+}
 }
