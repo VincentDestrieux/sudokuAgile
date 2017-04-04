@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +26,9 @@ public class Grille extends Activity {
     public void EditContenu(View v){
         int t = v.getId();
         EditText test= (EditText) findViewById(t);
-        test.setText("GO");
+        //test.setText("GO");
+
 
     }
+
 }
