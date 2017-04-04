@@ -3,6 +3,7 @@ package com.miage.master.myapplication;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.ArrayList;
@@ -11,24 +12,118 @@ import java.util.List;
 public class Grille extends Activity {
 
     List<EditText> textList = new ArrayList<EditText>();
+    EditText textToEdit;
+    Button b1;
+    Button b2;
+    Button b3;
+    Button b4;
+    Button b5;
+    Button b6;
+    Button b7;
+    Button b8;
+    Button b9;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grille);
-        for(int i=0;i<81;i++){
+    /*    for(int i=0;i<81;i++){
             textList.add((EditText)findViewById((R.id.Case1_1)+i));
             textList.get(i).setText(toString().valueOf(i));
 
-        }
+        }*/
+        b1=(Button) findViewById(R.id.button1);
+        b2=(Button) findViewById(R.id.button2);
+        b3=(Button) findViewById(R.id.button3);
+        b4=(Button) findViewById(R.id.button4);
+        b5=(Button) findViewById(R.id.button5);
+        b6=(Button) findViewById(R.id.button6);
+        b7=(Button) findViewById(R.id.button7);
+        b8=(Button) findViewById(R.id.button8);
+        b9=(Button) findViewById(R.id.button9);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "1"));
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "2"));
+            }
+        });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "3"));
+            }
+        });
+
+        b4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "4"));
+            }
+        });
+
+        b5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "5"));
+            }
+        });
+
+        b6.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "6"));
+            }
+        });
+
+        b7.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "7"));
+            }
+        });
+
+        b8.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "8"));
+            }
+        });
+
+        b9.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "9"));
+            }
+        });
+
+
     }
 
     public void EditContenu(View v){
         int t = v.getId();
         EditText test= (EditText) findViewById(t);
+        textToEdit = test;
         //test.setText("GO");
-
+    }
 
     }
 
-}
