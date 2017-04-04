@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:columnCount="9"
     android:rowCount="9"
-    android:largeHeap="true">
+    android:largeHeap="true" >
 
     <EditText
         android:id="@+id/Case1.1"
