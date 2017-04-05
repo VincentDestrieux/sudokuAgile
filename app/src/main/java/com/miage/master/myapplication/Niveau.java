@@ -12,17 +12,18 @@ public class Niveau extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niveau);
     }
-    public void start(View v){
+
+    public void start(View v) {
         Intent intent = new Intent(Niveau.this, Grille.class);
         startActivity(intent);
     }
 
-    public void test(View v){
+    public void test(View v) {
         Intent intent = new Intent(Niveau.this, TestReco.class);
         startActivity(intent);
     }
 
-    public void retour(View v){
+    public void retour(View v) {
         finish();
     }
 
