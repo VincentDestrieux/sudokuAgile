@@ -32,21 +32,21 @@ public class Grille extends Activity {
             textList.get(i).setText(toString().valueOf(i));
 
         }*/
-        b1=(Button) findViewById(R.id.button1);
-        b2=(Button) findViewById(R.id.button2);
-        b3=(Button) findViewById(R.id.button3);
-        b4=(Button) findViewById(R.id.button4);
-        b5=(Button) findViewById(R.id.button5);
-        b6=(Button) findViewById(R.id.button6);
-        b7=(Button) findViewById(R.id.button7);
-        b8=(Button) findViewById(R.id.button8);
-        b9=(Button) findViewById(R.id.button9);
+        b1 = (Button) findViewById(R.id.button1);
+        b2 = (Button) findViewById(R.id.button2);
+        b3 = (Button) findViewById(R.id.button3);
+        b4 = (Button) findViewById(R.id.button4);
+        b5 = (Button) findViewById(R.id.button5);
+        b6 = (Button) findViewById(R.id.button6);
+        b7 = (Button) findViewById(R.id.button7);
+        b8 = (Button) findViewById(R.id.button8);
+        b9 = (Button) findViewById(R.id.button9);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "1"));
+                if (textToEdit != null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "1"));
             }
         });
 
@@ -54,7 +54,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
+                if (textToEdit != null)
                     textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "2"));
             }
         });
@@ -63,7 +63,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
+                if (textToEdit != null)
                     textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "3"));
             }
         });
@@ -72,7 +72,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
+                if (textToEdit != null)
                     textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "4"));
             }
         });
@@ -81,7 +81,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
+                if (textToEdit != null)
                     textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "5"));
             }
         });
@@ -90,7 +90,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
+                if (textToEdit != null)
                     textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "6"));
             }
         });
@@ -99,7 +99,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
+                if (textToEdit != null)
                     textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "7"));
             }
         });
@@ -108,7 +108,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
+                if (textToEdit != null)
                     textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "8"));
             }
         });
@@ -117,7 +117,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                if(textToEdit !=null)
+                if (textToEdit != null)
                     textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "9"));
             }
         });
@@ -126,10 +126,12 @@ public class Grille extends Activity {
     }
 
     //Fonction permettant de remplir la grille
-    public void EditContenu(View v){
+    public void EditContenu(View v) {
         int t = v.getId();
         EditText test = (EditText) findViewById(t);
         textToEdit = test;
+        //Permet de clear la zone de texte pour réécrire dedans.
+        textToEdit.setText("");
     }
 
 }
