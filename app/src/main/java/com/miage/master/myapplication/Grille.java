@@ -12,7 +12,7 @@ import java.util.List;
 public class Grille extends Activity {
 
     private  List<EditText> textList = new ArrayList<EditText>();
-    private EditText textToEdit;
+    private EditText textToEdit ;
     private Button b1;
     private Button b2;
     private Button b3;
@@ -47,6 +47,7 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
+                if(textToEdit !=null)
                 textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "1"));
             }
         });
@@ -55,7 +56,8 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "2"));
+                if(textToEdit !=null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "2"));
             }
         });
 
@@ -63,7 +65,8 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "3"));
+                if(textToEdit !=null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "3"));
             }
         });
 
@@ -71,7 +74,8 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "4"));
+                if(textToEdit !=null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "4"));
             }
         });
 
@@ -79,7 +83,8 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "5"));
+                if(textToEdit !=null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "5"));
             }
         });
 
@@ -87,7 +92,8 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "6"));
+                if(textToEdit !=null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "6"));
             }
         });
 
@@ -95,7 +101,8 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "7"));
+                if(textToEdit !=null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "7"));
             }
         });
 
@@ -103,7 +110,8 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "8"));
+                if(textToEdit !=null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "8"));
             }
         });
 
@@ -111,7 +119,8 @@ public class Grille extends Activity {
 
             @Override
             public void onClick(View view) {
-                textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "9"));
+                if(textToEdit !=null)
+                    textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "9"));
             }
         });
 
