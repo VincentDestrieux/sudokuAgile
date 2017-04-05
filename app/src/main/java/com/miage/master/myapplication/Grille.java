@@ -120,7 +120,7 @@ public class Grille extends Activity {
 
     public void EditContenu(View v){
         int t = v.getId();
-        EditText test= (EditText) findViewById(t);
+        EditText test = (EditText) findViewById(t);
         textToEdit = test;
         //test.setText("GO");
     }
