@@ -65,4 +65,14 @@ class ZoneDeDessin extends View {
         invalidate();
         return true;
     }
+
+    //Fonction qui devrait permettre un screenShoot d'un écran
+    //(L'écran de dessin de préférence) que l'on devrait pouvoir
+    //afficher dans un ImageView ? En cours de dev ...
+    public Bitmap makeScreenShot(View view) {
+        View v1 = view.getRootView();
+        v1.setDrawingCacheEnabled(true);
+        Bitmap bm = v1.getDrawingCache();
+        return bm;
+    }
 }
