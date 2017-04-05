@@ -23,7 +23,6 @@
             android:inputType="none"
             android:editable="false"
             android:maxLength="1"/>
-
         <EditText
             android:id="@+id/Case1.2"
             android:layout_width="44dp"

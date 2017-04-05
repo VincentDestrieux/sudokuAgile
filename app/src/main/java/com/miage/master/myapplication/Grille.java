@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Grille extends Activity {
 
-    private  List<EditText> textList = new ArrayList<EditText>();
+    private List<EditText> textList = new ArrayList<EditText>();
     private EditText textToEdit;
     private Button b1;
     private Button b2;
@@ -22,7 +22,6 @@ public class Grille extends Activity {
     private Button b7;
     private Button b8;
     private Button b9;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,6 @@ public class Grille extends Activity {
         b9=(Button) findViewById(R.id.button9);
 
         b1.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 textToEdit.setText(textToEdit.getText().insert(textToEdit.getText().length(), "1"));
@@ -118,12 +116,12 @@ public class Grille extends Activity {
 
     }
 
+    //Fonction permettant de remplir la grille
     public void EditContenu(View v){
         int t = v.getId();
         EditText test = (EditText) findViewById(t);
         textToEdit = test;
-        //test.setText("GO");
     }
 
-    }
+}
 
