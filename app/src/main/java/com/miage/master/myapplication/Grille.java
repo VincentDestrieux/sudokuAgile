@@ -11,17 +11,17 @@ import java.util.List;
 
 public class Grille extends Activity {
 
-    List<EditText> textList = new ArrayList<EditText>();
-    EditText textToEdit;
-    Button b1;
-    Button b2;
-    Button b3;
-    Button b4;
-    Button b5;
-    Button b6;
-    Button b7;
-    Button b8;
-    Button b9;
+    private  List<EditText> textList = new ArrayList<EditText>();
+    private EditText textToEdit;
+    private Button b1;
+    private Button b2;
+    private Button b3;
+    private Button b4;
+    private Button b5;
+    private Button b6;
+    private Button b7;
+    private Button b8;
+    private Button b9;
 
 
     @Override
