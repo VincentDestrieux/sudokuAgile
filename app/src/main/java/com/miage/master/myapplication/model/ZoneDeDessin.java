@@ -81,10 +81,10 @@ public class ZoneDeDessin extends View {
         return bm;
     }
 
-    public static File storeInSDCard(Bitmap bm, String fileName){
+    public static File storeInSDCard(Bitmap bm, String fileName) {
         final String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Screenshots";
         File dir = new File(dirPath);
-        if(!dir.exists())
+        if (!dir.exists())
             dir.mkdirs();
         File file = new File(dirPath, fileName);
         try {

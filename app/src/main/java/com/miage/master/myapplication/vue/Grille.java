@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.miage.master.myapplication.R;
+import com.miage.master.myapplication.service.generator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,11 +30,15 @@ public class Grille extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grille);
-        /*for(int i=0;i<81;i++){
-            textList.add((EditText)findViewById((R.id.Case1_1)+i));
-            textList.get(i).setText(toString().valueOf(i));
-
-        }*/
+        int[][] sudoku = generator.getInstance().generateGrid();
+        int x = 0;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                textList.add((EditText) findViewById((R.id.Case1_1) + x));
+                textList.get(x).setText(toString().valueOf(sudoku[i][j]));
+                x++;
+            }
+        }
         b1 = (Button) findViewById(R.id.button1);
         b2 = (Button) findViewById(R.id.button2);
         b3 = (Button) findViewById(R.id.button3);

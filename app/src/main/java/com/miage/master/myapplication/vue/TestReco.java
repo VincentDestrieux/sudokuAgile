@@ -42,13 +42,13 @@ public class TestReco extends Activity {
             public void onClick(View view) {
                 View rootView = getWindow().getDecorView().findViewById(R.id.zoneDeDessin);
                 Bitmap dessin = z.makeScreenShot(rootView);
-                File f = z.storeInSDCard(dessin,nameFile);
+                File f = z.storeInSDCard(dessin, nameFile);
                 //shareImage(f);
             }
         });
     }
 
-    private void shareImage(File file){
+    private void shareImage(File file) {
         Uri uri = Uri.fromFile(file);
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_SEND);

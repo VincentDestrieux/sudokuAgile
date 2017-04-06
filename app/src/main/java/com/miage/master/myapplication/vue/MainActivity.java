@@ -1,8 +1,7 @@
-package com.miage.master.myapplication;
+package com.miage.master.myapplication.vue;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -16,12 +15,12 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    public void difficulty(View v){
+    public void difficulty(View v) {
         Intent intent = new Intent(MainActivity.this, Niveau.class);
         startActivity(intent);
     }
 
-    public void exitApp(View v){
+    public void exitApp(View v) {
         finish();
     }
 }
