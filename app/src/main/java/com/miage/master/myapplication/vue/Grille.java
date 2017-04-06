@@ -1,10 +1,12 @@
-package com.miage.master.myapplication;
+package com.miage.master.myapplication.vue;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.miage.master.myapplication.R;
 
 import java.util.ArrayList;
 import java.util.List;

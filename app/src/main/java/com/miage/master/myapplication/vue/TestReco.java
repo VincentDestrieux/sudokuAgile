@@ -1,4 +1,4 @@
-package com.miage.master.myapplication;
+package com.miage.master.myapplication.vue;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.io.File;
+
+import com.miage.master.myapplication.model.ZoneDeDessin;
 
 public class TestReco extends Activity {
     private static final int ECRAN = 900;
