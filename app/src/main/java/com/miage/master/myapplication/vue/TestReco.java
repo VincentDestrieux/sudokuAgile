@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import java.io.File;
 
+import com.miage.master.myapplication.R;
 import com.miage.master.myapplication.model.ZoneDeDessin;
 
 public class TestReco extends Activity {
