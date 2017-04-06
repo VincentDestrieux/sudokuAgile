@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,11 +26,11 @@ public class Grille extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grille);
-        /*for(int i=0;i<81;i++){
+        for(int i=0;i<81;i++){
             textList.add((EditText)findViewById((R.id.Case1_1)+i));
             textList.get(i).setText(toString().valueOf(i));
 
-        }*/
+        }
         b1 = (Button) findViewById(R.id.button1);
         b2 = (Button) findViewById(R.id.button2);
         b3 = (Button) findViewById(R.id.button3);
