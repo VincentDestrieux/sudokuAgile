@@ -1,4 +1,4 @@
-package com.miage.master.myapplication;
+package com.miage.master.myapplication.model;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,7 +13,7 @@ import android.view.View;
 import java.io.File;
 import java.io.FileOutputStream;
 
-class ZoneDeDessin extends View {
+public class ZoneDeDessin extends View {
 
     private Path drawPath;
     private Paint drawPaint, canvasPaint;

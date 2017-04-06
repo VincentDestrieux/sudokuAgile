@@ -8,3 +8,6 @@
 /captures
 .externalNativeBuild
 /.idea
+projectFilesBackup/.idea/workspace.xml
+app/src/main/java/com/miage/master/myapplication/mainTest.java
+.idea
