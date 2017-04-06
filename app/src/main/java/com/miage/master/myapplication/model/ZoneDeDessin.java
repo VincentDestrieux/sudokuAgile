@@ -6,12 +6,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.os.Environment;
 import android.view.MotionEvent;
 import android.view.View;
-
-import java.io.File;
-import java.io.FileOutputStream;
 
 public class ZoneDeDessin extends View {
 
@@ -81,10 +77,39 @@ public class ZoneDeDessin extends View {
         return bm;
     }
 
-    public static File storeInSDCard(Bitmap bm, String fileName) {
+    /*public void saveImage(View view) {
+
+       // Bitmap finalBitmap = makeScreenShot(view);
+       // File directory = new File(Environment.getExternalStorageDirectory()+File.separator+"images");
+        //directory.mkdirs();
+        View v1 = view.getRootView();
+        v1.setDrawingCacheEnabled(true);
+        Bitmap bm = Bitmap.createBitmap(v1.getDrawingCache());
+        v1.setDrawingCacheEnabled(false);
+
+        File myDir=new File("/Images");
+        myDir.mkdirs();
+        Random generator = new Random();
+        int n = 10000;
+        n = generator.nextInt(n);
+        String fname = "Images"+ n +".jpg";
+        File file = new File (myDir, fname);
+        if (file.exists ()) file.delete ();
+        try {
+            FileOutputStream out = new FileOutputStream(file);
+            bm.compress(Bitmap.CompressFormat.JPEG, 90, out);
+            out.flush();
+            out.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }*/
+
+   /* public static File storeInSDCard(Bitmap bm, String fileName){
         final String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Screenshots";
         File dir = new File(dirPath);
-        if (!dir.exists())
+        if(!dir.exists())
             dir.mkdirs();
         File file = new File(dirPath, fileName);
         try {
@@ -96,5 +121,5 @@ public class ZoneDeDessin extends View {
             e.printStackTrace();
         }
         return dir;
-    }
+    }*/
 }

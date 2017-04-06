@@ -19,7 +19,9 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="200dp"
-            android:onClick="getScreenshot"
+            android:largeHeap="true"
+            android:onClick="saveImage"
+            android:hardwareAccelerated="false"
             android:text="Push" />
 
         <ImageView
@@ -27,6 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_alignParentBottom="true"
+            android:hardwareAccelerated="false"
+            android:largeHeap="true"
             android:layout_alignParentStart="true" />
 
     </RelativeLayout>
