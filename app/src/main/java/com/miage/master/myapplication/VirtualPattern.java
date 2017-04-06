@@ -17,4 +17,10 @@ public abstract class VirtualPattern implements MovingPattern{
     public boolean isOver() {
         return (caseLeft == 0);
     }
+    
+    public void toBegin()
+    {
+    	row = column = 1;
+        caseLeft = 9*9;
+    }
 }

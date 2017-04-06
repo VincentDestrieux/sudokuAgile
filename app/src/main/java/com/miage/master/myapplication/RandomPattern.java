@@ -20,12 +20,24 @@ public class RandomPattern implements MovingPattern
 
     @Override
     public PairCoord Next() {
-        PairCoord cell = cellAvailable.remove(randomPos.nextInt(cellAvailable.size()));
-        return cell;
+    	if(this.isOver())
+    	{
+    		PairCoord cell = cellAvailable.remove(randomPos.nextInt(cellAvailable.size()));
+    		return cell;
+    	}
+    	return null;
     }
 
     @Override
     public boolean isOver() {
         return cellAvailable.isEmpty();
+    }
+    
+    public void toBegin()
+    {
+    	cellAvailable.clear();
+    	for(int i=1;i<10;i++)
+            for(int j=1;j<10;j++)
+                cellAvailable.add(new PairCoord(i, j));
     }
 }

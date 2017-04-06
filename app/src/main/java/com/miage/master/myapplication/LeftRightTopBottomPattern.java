@@ -8,8 +8,7 @@ public class LeftRightTopBottomPattern extends VirtualPattern{
 //Do this with global values
 	public PairCoord Next() {
 		if (isOver()) {
-			row = column = 1;
-			caseLeft = 9 * 9;
+			return null;
 		}
 		PairCoord tmp;
 		caseLeft--;

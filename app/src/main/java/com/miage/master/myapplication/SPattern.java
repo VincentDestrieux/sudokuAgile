@@ -10,8 +10,7 @@ public class SPattern extends VirtualPattern{
 
     public PairCoord Next(){
         if (isOver()) {
-            row = column = 1;
-            caseLeft = 9 * 9;
+            return null;
         }
         PairCoord tmp;
         caseLeft--;
