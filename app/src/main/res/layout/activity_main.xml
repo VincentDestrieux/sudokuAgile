@@ -4,12 +4,12 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context="com.miage.master.myapplication.MainActivity"
+tools:context="com.miage.master.myapplication.vue.MainActivity"
 android:background="@drawable/sudoku_background"
 tools:layout_editor_absoluteY="81dp"
 tools:layout_editor_absoluteX="0dp">
 
-    <com.miage.master.myapplication.CustomButton
+    <com.miage.master.myapplication.utils.CustomButton
         android:id="@+id/boutonStart"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="250dp"
@@ -19,7 +19,7 @@ tools:layout_editor_absoluteX="0dp">
         app:font="chowfun.TTF"
         android:textColor="@android:color/black"
         android:textSize="40sp"
-        android:shadowColor="#CCCCCC"
+        android:shadowColor="@color/shadow"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
@@ -32,7 +32,7 @@ tools:layout_editor_absoluteX="0dp">
         android:onClick="difficulty"
         />
 
-    <com.miage.master.myapplication.CustomButton
+    <com.miage.master.myapplication.utils.CustomButton
         android:id="@+id/Quitter"
         android:layout_width="250dp"
         android:layout_height="80dp"
@@ -41,7 +41,7 @@ tools:layout_editor_absoluteX="0dp">
         app:font="chowfun.TTF"
         android:textColor="@android:color/black"
         android:textSize="40sp"
-        android:shadowColor="#CCCCCC"
+        android:shadowColor="@color/shadow"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"

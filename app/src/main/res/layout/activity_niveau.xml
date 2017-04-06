@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fond1"
-    tools:context="com.miage.master.myapplication.Niveau">
+    tools:context="com.miage.master.myapplication.vue.Niveau">
 
     <!-- Ancien Format des boutons a garder au cas où
   <Button
@@ -47,13 +47,13 @@
             android:src="@drawable/etoile1"
             android:contentDescription="@string/etoile" />
 
-        <com.miage.master.myapplication.CustomTextView
+        <com.miage.master.myapplication.utils.CustomTextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
             android:gravity="center_vertical"
-            android:textColor="#000000"
+            android:textColor="@color/textBlack"
             android:text="@string/tresFacile"
             android:textSize="15sp"
             app:font="chowfun.TTF"/>
@@ -83,13 +83,13 @@
             android:src="@drawable/etoile2"
             android:contentDescription="@string/etoile" />
 
-        <com.miage.master.myapplication.CustomTextView
+        <com.miage.master.myapplication.utils.CustomTextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
             android:gravity="center_vertical"
-            android:textColor="#000000"
+            android:textColor="@color/textBlack"
             android:text="@string/facile"
             android:textSize="20sp"
             app:font="chowfun.TTF"/>
@@ -119,13 +119,13 @@
             android:src="@drawable/etoile3"
             android:contentDescription="@string/etoile" />
 
-        <com.miage.master.myapplication.CustomTextView
+        <com.miage.master.myapplication.utils.CustomTextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
             android:gravity="center_vertical"
-            android:textColor="#000000"
+            android:textColor="@color/textBlack"
             android:text="@string/moyen"
             android:textSize="20sp"
             app:font="chowfun.TTF"/>
@@ -155,13 +155,13 @@
             android:src="@drawable/etoile4"
             android:contentDescription="@string/etoile" />
 
-        <com.miage.master.myapplication.CustomTextView
+        <com.miage.master.myapplication.utils.CustomTextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
             android:gravity="center_vertical"
-            android:textColor="#000000"
+            android:textColor="@color/textBlack"
             android:text="@string/difficile"
             android:textSize="20sp"
             app:font="chowfun.TTF"/>
@@ -191,28 +191,29 @@
             android:src="@drawable/etoile5"
             android:contentDescription="@string/etoile" />
 
-        <com.miage.master.myapplication.CustomTextView
+        <com.miage.master.myapplication.utils.CustomTextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:lines="1"
             android:gravity="center_vertical"
-            android:textColor="#000000"
+            android:textColor="@color/textBlack"
             android:text="@string/tresDifficile"
             android:textSize="15sp"
-            app:font="chowfun.TTF"/>
+            app:font="chowfun.TTF"
+            android:onClick="test"/>
 
     </LinearLayout>
 
-    <com.miage.master.myapplication.CustomButton
+    <com.miage.master.myapplication.utils.CustomButton
         android:id="@+id/buttonRetour"
         android:layout_width="89dp"
         android:layout_height="83dp"
         android:background="@drawable/fleur"
         android:onClick="retour"
-        android:textColor="#000000"
-        android:text="Retour"
-        android:textSize="10sp"
+        android:textColor="@color/textBlack"
+        android:text="@string/retour"
+        android:textSize="12sp"
         app:font="chowfun.TTF"
         tools:layout_editor_absoluteY="-11dp"
         tools:layout_editor_absoluteX="-9dp" />
