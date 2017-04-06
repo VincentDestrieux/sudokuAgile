@@ -15,8 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Grille" />
+        <activity android:name=".Grille"></activity>
         <activity android:name=".Niveau"></activity>
+        <activity android:name=".TestReco"></activity>
     </application>
 
 </manifest>
