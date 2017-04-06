@@ -1,4 +1,4 @@
-package com.miage.master.myapplication;
+package com.miage.master.myapplication.model;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,7 +9,7 @@ import android.graphics.Path;
 import android.view.MotionEvent;
 import android.view.View;
 
-class ZoneDeDessin extends View {
+public class ZoneDeDessin extends View {
 
     private Path drawPath;
     private Paint drawPaint, canvasPaint;

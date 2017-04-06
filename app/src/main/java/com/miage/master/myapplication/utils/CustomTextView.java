@@ -1,10 +1,12 @@
-package com.miage.master.myapplication;
+package com.miage.master.myapplication.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
+
+import com.miage.master.myapplication.R;
 
 public class CustomTextView extends android.support.v7.widget.AppCompatTextView {
 

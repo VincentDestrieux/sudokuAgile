@@ -1,10 +1,11 @@
-package com.miage.master.myapplication;
+package com.miage.master.myapplication.vue;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.miage.master.myapplication.R;
 
 public class MainActivity extends Activity {
 
