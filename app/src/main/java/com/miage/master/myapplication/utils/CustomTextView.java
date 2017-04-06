@@ -32,7 +32,7 @@ public class CustomTextView extends android.support.v7.widget.AppCompatTextView 
     }
 
     public void setTypeFace(String fontName) {
-        if(fontName != null){
+        if (fontName != null) {
             try {
                 Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + fontName);
                 setTypeface(typeface);

@@ -8,7 +8,7 @@ import android.util.Log;
 
 import com.miage.master.myapplication.R;
 
-public class CustomButton extends android.support.v7.widget.AppCompatButton{
+public class CustomButton extends android.support.v7.widget.AppCompatButton {
 
     public CustomButton(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -32,7 +32,7 @@ public class CustomButton extends android.support.v7.widget.AppCompatButton{
     }
 
     public void setTypeFace(String fontName) {
-        if(fontName != null){
+        if (fontName != null) {
             try {
                 Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + fontName);
                 setTypeface(typeface);

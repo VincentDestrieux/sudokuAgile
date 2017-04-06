@@ -15,13 +15,12 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    public void difficulty(View v){
+    public void difficulty(View v) {
         Intent intent = new Intent(MainActivity.this, Niveau.class);
         startActivity(intent);
     }
 
-
-    public void exitApp(View v){
+    public void exitApp(View v) {
         finish();
     }
 }
