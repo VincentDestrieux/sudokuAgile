@@ -6,8 +6,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.os.Environment;
 import android.view.MotionEvent;
 import android.view.View;
+
+import java.io.File;
+import java.io.FileOutputStream;
 
 class ZoneDeDessin extends View {
 
@@ -69,10 +73,28 @@ class ZoneDeDessin extends View {
     //Fonction qui devrait permettre un screenShoot d'un écran
     //(L'écran de dessin de préférence) que l'on devrait pouvoir
     //afficher dans un ImageView ? En cours de dev ...
-    public Bitmap makeScreenShot(View view) {
+    public static Bitmap makeScreenShot(View view) {
         View v1 = view.getRootView();
         v1.setDrawingCacheEnabled(true);
-        Bitmap bm = v1.getDrawingCache();
+        Bitmap bm = Bitmap.createBitmap(v1.getDrawingCache());
+        v1.setDrawingCacheEnabled(false);
         return bm;
+    }
+
+    public static File storeInSDCard(Bitmap bm, String fileName){
+        final String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Screenshots";
+        File dir = new File(dirPath);
+        if(!dir.exists())
+            dir.mkdirs();
+        File file = new File(dirPath, fileName);
+        try {
+            FileOutputStream fOut = new FileOutputStream(file);
+            bm.compress(Bitmap.CompressFormat.PNG, 85, fOut);
+            fOut.flush();
+            fOut.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dir;
     }
 }

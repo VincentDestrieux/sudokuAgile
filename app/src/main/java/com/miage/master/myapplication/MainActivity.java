@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
     }
 
     public void difficulty(View v){
-        Intent intent = new Intent(MainActivity.this, Niveau.class);
+        Intent intent = new Intent(MainActivity.this, TestReco.class);
         startActivity(intent);
     }
 
