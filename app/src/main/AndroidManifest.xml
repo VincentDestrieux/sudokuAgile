@@ -19,7 +19,7 @@
         </activity>
         <activity android:name=".vue.Grille"></activity>
         <activity android:name=".vue.Niveau"></activity>
-        <activity android:name=".vue.TestReco"></activity>
+        <activity android:name=".vue.Reconnaissance"></activity>
     </application>
 
 </manifest>

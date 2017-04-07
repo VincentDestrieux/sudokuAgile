@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.miage.master.myapplication.vue.TestReco">
+    tools:context="com.miage.master.myapplication.vue.Reconnaissance">
 
    <RelativeLayout
         android:id="@+id/relativeL"
@@ -20,12 +20,12 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="200dp"
             android:largeHeap="true"
-            android:onClick="saveImage"
+            android:onClick="screenShot"
             android:hardwareAccelerated="false"
             android:text="Push" />
 
         <ImageView
-            android:id="@+id/screenShoot"
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_alignParentBottom="true"
