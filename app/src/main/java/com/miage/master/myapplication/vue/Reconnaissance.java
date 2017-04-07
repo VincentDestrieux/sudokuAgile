@@ -61,7 +61,7 @@ public class Reconnaissance extends Activity {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.PNG, 40, bytes);
         File file = new File(Environment.getExternalStorageDirectory() +
-                "/capturedscreenandroid.png");
+                "/image.png");
         try {
             file.createNewFile();
             FileOutputStream outputStream = new FileOutputStream(file);
