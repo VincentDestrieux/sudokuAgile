@@ -19,18 +19,13 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="200dp"
-            android:largeHeap="true"
-            android:onClick="screenShot"
-            android:hardwareAccelerated="false"
-            android:text="Push" />
+            android:text="Screen" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_alignParentBottom="true"
-            android:hardwareAccelerated="false"
-            android:largeHeap="true"
             android:layout_alignParentStart="true" />
 
     </RelativeLayout>

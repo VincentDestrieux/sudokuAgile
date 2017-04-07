@@ -6,7 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -19,8 +19,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 public class Reconnaissance extends Activity {
-    private static final int ECRAN = 900;
-    private static final String nameFile = "screenSudoku";
 
     private RelativeLayout rl;
     private ZoneDeDessin dessin;
@@ -31,6 +29,7 @@ public class Reconnaissance extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_reconnaissance);
 
         push = (Button) findViewById(R.id.button);
@@ -40,8 +39,8 @@ public class Reconnaissance extends Activity {
         push.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                View rootView = getWindow().getDecorView().findViewById(R.id.zoneDeDessin);
-                bmp = Capture(rootView);
+                View zoneDeDessin = findViewById(R.id.zoneDeDessin);
+                bmp = Capture(zoneDeDessin);
                 imageView.setImageBitmap(bmp);
                 creerImage(bmp);
             }
@@ -52,7 +51,8 @@ public class Reconnaissance extends Activity {
     public Bitmap Capture(View v) {
         View rootview = v.getRootView();
         rootview.setDrawingCacheEnabled(true);
-        Bitmap bitmap1 = rootview.getDrawingCache();
+        Bitmap bitmap1 = Bitmap.createBitmap(rootview.getDrawingCache(),0,0,getWindowManager().getDefaultDisplay().getWidth(),getWindowManager().getDefaultDisplay().getHeight()/2);
+        rootview.setDrawingCacheEnabled(false);
         return bitmap1;
     }
 
@@ -78,7 +78,7 @@ public class Reconnaissance extends Activity {
 
         dessin = new ZoneDeDessin(this);
         dessin.setBackgroundColor(Color.WHITE);
-        dessin.setLayoutParams(new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ECRAN));
+        dessin.setLayoutParams(new RelativeLayout.LayoutParams(getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight()/2));
         dessin.setId(R.id.zoneDeDessin);
 
         rl.addView(dessin);
