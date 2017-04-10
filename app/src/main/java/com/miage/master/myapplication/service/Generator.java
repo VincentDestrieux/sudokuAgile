@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class generator {
-    private static generator instance;
+public class Generator {
+    private static Generator instance;
 
     private ArrayList<ArrayList<Integer>> Available = new ArrayList<ArrayList<Integer>>();
 
     private Random rand = new Random();
 
-    private generator() {
+    private Generator() {
     }
 
-    public static generator getInstance() {
+    public static Generator getInstance() {
         if (instance == null) {
-            instance = new generator();
+            instance = new Generator();
         }
         return instance;
     }
