@@ -9,10 +9,9 @@ import com.miage.master.myapplication.model.Grid;
 public interface SolvingAlgorithm {
 
     //Solve the given grid item
-    boolean compute(Grid grid);
+    Grid compute(Grid grid);
 
     void setPattern(MovingPattern pattern);
-
     // Default pattern LRTBPattern
     String getPattern();
 }

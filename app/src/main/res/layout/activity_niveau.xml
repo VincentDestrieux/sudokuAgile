@@ -38,7 +38,8 @@
         app:layout_constraintVertical_bias="0.100"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="start">
+        android:onClick="start"
+        android:tag="1">
 
         <ImageView
             android:id="@+id/imageTresFacile"
@@ -74,6 +75,8 @@
         app:layout_constraintVertical_bias="0.280"
         android:clickable="true"
         android:focusable="true"
+        android:onClick="start"
+        android:tag="2"
         >
 
         <ImageView
@@ -110,6 +113,8 @@
         app:layout_constraintVertical_bias="0.460"
         android:clickable="true"
         android:focusable="true"
+        android:onClick="start"
+        android:tag="3"
         >
 
         <ImageView
@@ -146,6 +151,8 @@
         app:layout_constraintVertical_bias="0.640"
         android:clickable="true"
         android:focusable="true"
+        android:onClick="start"
+        android:tag="4"
         >
 
         <ImageView
@@ -182,6 +189,7 @@
         app:layout_constraintVertical_bias="0.820"
         android:clickable="true"
         android:focusable="true"
+        android:tag="5"
         >
 
         <ImageView

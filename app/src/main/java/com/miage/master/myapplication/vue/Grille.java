@@ -30,12 +30,39 @@ public class Grille extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grille);
-        int[][] sudoku = generator.getInstance().generateGrid();
+        Bundle bundle = getIntent().getExtras();
+        String niveau = bundle.getString("niveau");
+        int[][] sudoku = null;
+        switch(niveau){
+            case"1":
+                 sudoku = generator.getInstance().generateGrid(1);
+                break;
+            case"2":
+                 sudoku = generator.getInstance().generateGrid(2);
+                break;
+            case"3":
+                 sudoku = generator.getInstance().generateGrid(3);
+                break;
+            case"4":
+                 sudoku = generator.getInstance().generateGrid(4);
+                break;
+            case"5":
+                 sudoku = generator.getInstance().generateGrid(5);
+                break;
+
+
+        }
+
+
         int x = 0;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 textList.add((EditText) findViewById((R.id.Case1_1) + x));
                 textList.get(x).setText(toString().valueOf(sudoku[i][j]));
+                if(sudoku[i][j]==0)
+                {
+                    textList.get(x).setText("");
+                }
                 x++;
             }
         }
