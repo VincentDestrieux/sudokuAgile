@@ -3,9 +3,6 @@ package com.miage.master.myapplication.service;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Created by Halim on 31/03/2017.
- */
 
 public class generator {
     private static generator instance;
@@ -59,10 +56,10 @@ public class generator {
                 currentPos--;
             }
         }
-        int nbHole=0;
+        int nbHole = 0;
         Random r = new Random();
 
-        switch(niveau){
+        switch (niveau) {
             case 1:
                 nbHole = r.nextInt(31 - 21) + 21;
                 break;
@@ -70,8 +67,8 @@ public class generator {
                 nbHole = r.nextInt(45 - 32) + 32;
                 break;
             case 3:
-            nbHole = r.nextInt(49 - 46) + 46;
-            break;
+                nbHole = r.nextInt(49 - 46) + 46;
+                break;
             case 4:
                 nbHole = r.nextInt(53 - 50) + 50;
                 break;
@@ -80,27 +77,49 @@ public class generator {
                 break;
 
         }
-            diggingHole(nbHole, Sudoku);
+        int score;
+        diggingHole(nbHole, Sudoku);
+        switch (countHole(Sudoku)) {
+            case 5:
+                score = 1;
+                break;
+            case 4:
+                score = 2;
+                break;
+            case 3:
+                score = 3;
+                break;
+            case 2:
+                score = 4;
+                break;
+            case 0:
+                score = 5;
+                break;
+        }
         return Sudoku;
     }
 
-    public void diggingHole(int nbHole,int[][] Sudoku)
-    {
+    /**
+     *
+     *
+     * @param nbHole le nombre de trou à "creuser"
+     * @param Sudoku laa grille de sudoku
+     */
+    public void diggingHole(int nbHole, int[][] Sudoku) {
         double nbCase = 81;
-        double nbTrou = (double)nbHole;
+        double nbTrou = (double) nbHole;
 
-        for(int i=0;i<9;i++)
-            for(int j=0;j<9;j++)
-            {
-                double probaTrou = nbTrou/nbCase;
-                if(Math.random() <= probaTrou)
-                {
+        for (int i = 0; i < 9; i++)
+            for (int j = 0; j < 9; j++) {
+                double probaTrou = nbTrou / nbCase;
+                if (Math.random() <= probaTrou) {
                     Sudoku[i][j] = 0;
                     nbTrou--;
                 }
                 nbCase--;
             }
     }
+
     private void clearGrid(int[][] Sudoku) {
         Available.clear();
 
@@ -172,4 +191,45 @@ public class generator {
 
         return false;
     }
+
+    /**
+     *
+     * @param sudoku
+     * @return le nombre minimal de trou sur toutes les lignes/colonnes
+     */
+    public int countHole(int[][] sudoku) {
+        int i = 0, j = 0;
+        int nbColonne = 0;
+        int nbLigne = 0;
+        int minCol = 9;
+        int minLig = 9;
+
+
+        for (i = 0; i < 9; i++) {
+
+            for (j = 0; j < 9; j++) {
+                if (sudoku[i][j] == 0) {
+                    nbColonne++;
+
+                }
+
+                if (sudoku[j][i] == 0) {
+                    nbLigne++;
+                }
+
+            }
+            if (nbColonne < minCol) {
+                minCol = nbColonne;
+            }
+            if (nbLigne < minLig) {
+                minLig = nbLigne;
+            }
+            nbColonne = 0;
+            nbLigne = 0;
+        }
+        if (minCol < minLig) {
+            return minCol;
+        } else return minLig;
+    }
+
 }
