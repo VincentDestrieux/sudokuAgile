@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.miage.master.myapplication.R;
-import com.miage.master.myapplication.service.Generator;
+import com.miage.master.myapplication.service.generator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,19 +35,19 @@ public class Grille extends Activity {
         int[][] sudoku = null;
         switch(niveau){
             case"1":
-                 sudoku = Generator.getInstance().generateGrid(1);
+                 sudoku = generator.getInstance().generateGrid(1);
                 break;
             case"2":
-                 sudoku = Generator.getInstance().generateGrid(2);
+                 sudoku = generator.getInstance().generateGrid(2);
                 break;
             case"3":
-                 sudoku = Generator.getInstance().generateGrid(3);
+                 sudoku = generator.getInstance().generateGrid(3);
                 break;
             case"4":
-                 sudoku = Generator.getInstance().generateGrid(4);
+                 sudoku = generator.getInstance().generateGrid(4);
                 break;
             case"5":
-                 sudoku = Generator.getInstance().generateGrid(5);
+                 sudoku = generator.getInstance().generateGrid(5);
                 break;
 
 
