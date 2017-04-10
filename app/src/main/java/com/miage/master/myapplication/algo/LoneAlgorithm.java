@@ -1,6 +1,6 @@
 package com.miage.master.myapplication.algo;
 
-import com.miage.master.myapplication.model.*
+import com.miage.master.myapplication.model.*;
 
 import java.util.ArrayList;
 

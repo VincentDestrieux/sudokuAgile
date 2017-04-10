@@ -24,7 +24,7 @@ public class generator {
         return instance;
     }
 
-    public int[][] generateGrid() {
+    public int[][] generateGrid(int niveau) {
         int[][] Sudoku = new int[9][9];
 
         int currentPos = 0;
@@ -59,27 +59,48 @@ public class generator {
                 currentPos--;
             }
         }
+        int nbHole=0;
+        Random r = new Random();
 
+        switch(niveau){
+            case 1:
+                nbHole = r.nextInt(31 - 21) + 21;
+                break;
+            case 2:
+                nbHole = r.nextInt(45 - 32) + 32;
+                break;
+            case 3:
+            nbHole = r.nextInt(49 - 46) + 46;
+            break;
+            case 4:
+                nbHole = r.nextInt(53 - 50) + 50;
+                break;
+            case 5:
+                nbHole = r.nextInt(59 - 54) + 54;
+                break;
 
-        return Sudoku;
-    }
-
-    public int[][] removeElements(int[][] Sudoku) {
-        int i = 0;
-
-        while (i < 3) {
-            int x = rand.nextInt(9);
-            int y = rand.nextInt(9);
-
-            if (Sudoku[x][y] != 0) {
-                Sudoku[x][y] = 0;
-                i++;
-            }
         }
+            diggingHole(nbHole, Sudoku);
         return Sudoku;
-
     }
 
+    public void diggingHole(int nbHole,int[][] Sudoku)
+    {
+        double nbCase = 81;
+        double nbTrou = (double)nbHole;
+
+        for(int i=0;i<9;i++)
+            for(int j=0;j<9;j++)
+            {
+                double probaTrou = nbTrou/nbCase;
+                if(Math.random() <= probaTrou)
+                {
+                    Sudoku[i][j] = 0;
+                    nbTrou--;
+                }
+                nbCase--;
+            }
+    }
     private void clearGrid(int[][] Sudoku) {
         Available.clear();
 

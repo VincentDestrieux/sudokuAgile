@@ -212,7 +212,7 @@ public class Grid {
 		possibleGrid.LoneBlock(pos);
 		return this.checkComplete();
 	}
-
+/*
 	//Testing main - /!\ Move to Log.d on Android device !
 	public static void main (String[] args)
 	{
@@ -234,7 +234,7 @@ public class Grid {
 						{0,0,0,0,0,0,2,0,0},
 						{0,0,6,0,0,0,8,0,7},
 						{0,0,0,3,1,6,0,5,9}};*/
-
+/*
 		int[][] easy = {{0,3,4,0,0,0,0,9,0},
 						{6,0,0,0,0,8,2,1,4},
 						{0,0,1,0,2,7,0,0,0},
@@ -269,9 +269,9 @@ public class Grid {
 		//System.out.println(easyGrid.toString());
 
 		//BCREAlgorithm algo = new BCREAlgorithm();
-		BCRELoneAlgorithm algo = new BCRELoneAlgorithm();
-		easyGrid = algo.compute(easyGrid);
-		System.out.println(easyGrid.toString());
-	}
+//		BCRELoneAlgorithm algo = new BCRELoneAlgorithm();
+//		easyGrid = algo.compute(easyGrid);
+//		System.out.println(easyGrid.toString());
+//	}
 
 }
