@@ -101,12 +101,10 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
                 backtrack = true;
                 position--;
             }
-
         }
-
         if (position < 0) {
-            System.out.println("no solution");
-            return;
+                System.out.println("no solution");
+                return;
         }
     }
 

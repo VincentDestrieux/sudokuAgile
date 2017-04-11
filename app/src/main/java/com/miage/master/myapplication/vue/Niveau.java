@@ -26,7 +26,7 @@ public class Niveau extends Activity {
         startActivity(intent);
     }
 
-    public void test(View v) {
+    public void reconnaissance(View v) {
         Intent intent = new Intent(Niveau.this, Reconnaissance.class);
         startActivity(intent);
     }
