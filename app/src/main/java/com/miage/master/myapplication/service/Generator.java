@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class generator {
-    private static generator instance;
+public class Generator {
+    private static Generator instance;
 
     private ArrayList<ArrayList<Integer>> Available = new ArrayList<ArrayList<Integer>>();
 
     private Random rand = new Random();
 
-    private generator() {
+    private Generator() {
     }
 
-    public static generator getInstance() {
+    public static Generator getInstance() {
         if (instance == null) {
-            instance = new generator();
+            instance = new Generator();
         }
         return instance;
     }
@@ -100,8 +100,6 @@ public class generator {
     }
 
     /**
-     *
-     *
      * @param nbHole le nombre de trou à "creuser"
      * @param Sudoku laa grille de sudoku
      */
@@ -141,11 +139,8 @@ public class generator {
         int xPos = currentPos % 9;
         int yPos = currentPos / 9;
 
-        if (checkHorizontalConflict(Sudoku, xPos, yPos, number) || checkVerticalConflict(Sudoku, xPos, yPos, number) || checkRegionConflict(Sudoku, xPos, yPos, number)) {
-            return true;
-        }
+        return checkHorizontalConflict(Sudoku, xPos, yPos, number) || checkVerticalConflict(Sudoku, xPos, yPos, number) || checkRegionConflict(Sudoku, xPos, yPos, number);
 
-        return false;
     }
 
     /**
@@ -193,12 +188,12 @@ public class generator {
     }
 
     /**
-     *
      * @param sudoku
      * @return le nombre minimal de trou sur toutes les lignes/colonnes
      */
     public int countHole(int[][] sudoku) {
-        int i = 0, j = 0;
+        int i = 0;
+        int j = 0;
         int nbColonne = 0;
         int nbLigne = 0;
         int minCol = 9;
