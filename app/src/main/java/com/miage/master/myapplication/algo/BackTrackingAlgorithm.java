@@ -9,7 +9,8 @@ import com.miage.master.myapplication.model.PairCoord;
 
 public class BackTrackingAlgorithm extends VirtualAlgorithm {
 
-    private int squareSize, gridSize;
+    private final int squareSize = 3;
+    private final int gridSize = 9;
     // Tableau des valeurs initiales
     private boolean[][] fixed;
     // La grille a resoudre
@@ -17,15 +18,12 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
     // Tableau de ligne, colonne, et cube (3*3)
     private boolean[][] lockrow, lockcol, locksqr;
 
-    public BackTrackingAlgorithm(int size) {
+    public BackTrackingAlgorithm() {
         super();
-        this.squareSize = size;
-        this.gridSize = size * size;
     }
 
-    public BackTrackingAlgorithm(MovingPattern pattern, int size) {
+    public BackTrackingAlgorithm(MovingPattern pattern) {
         super(pattern);
-        this.squareSize = size;
     }
 
     // initialise la structure
@@ -44,11 +42,11 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
         while ((currentPos = move.Next()) != null) {
             int val = grid.getDigit(currentPos);
             int row = cpt / gridSize, col = cpt % gridSize;
-            if (val == 0) continue;
+            cpt++;
+            if (val < 1) continue;
             solution[row][col] = val;
             fixed[row][col] = true;
             setlock(row, col, val, true);
-            cpt++;
         }
     }
 
@@ -76,8 +74,11 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
             int col = position % this.gridSize;
 
             if (fixed[row][col]) {
-                if (backtrack) position--;
-                else position++;
+                if (backtrack) {
+                    position--;
+                } else {
+                    position++;
+                }
                 continue;
             }
 
@@ -103,9 +104,20 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
             }
         }
         if (position < 0) {
-                System.out.println("no solution");
-                return;
+            System.out.println("no solution");
+            return;
         }
+    }
+
+    //Méthode permettant de visualiser la grille pendant le traitement
+    private void visualGrille() {
+        StringBuffer sb = new StringBuffer();
+        for (int r = 0; r < gridSize; r++) {
+            for (int c = 0; c < gridSize; c++)
+                sb.append((solution[r][c] == 0) ? "." : solution[r][c]).append(" ");
+            sb.append("\n");
+        }
+        System.out.println(sb.toString());
     }
 
     @Override
@@ -116,17 +128,15 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
         load(grid);
         //On rempli notre tableau de solution
         fillTab();
-
         //On charge la Grille avec notre tableau de solution
         Grid resultat = new Grid();
-        PairCoord cursorResult;
-        while ((cursorResult = move.Next()) != null) {
-            if (grid.getDigit(cursorResult) == 0) {
-                grid.setDigit(cursorResult, solution[cursorResult.getX()][cursorResult.getY()]);
+
+        for (int i = 0; i < gridSize; i++) {
+            for (int j = 0; j < gridSize; j++) {
+                resultat.setMainGrid(i, j, solution[i][j]);
             }
         }
 
         return resultat;
     }
-
 }
