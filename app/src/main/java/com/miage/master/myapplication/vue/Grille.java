@@ -33,34 +33,31 @@ public class Grille extends Activity {
         Bundle bundle = getIntent().getExtras();
         String niveau = bundle.getString("niveau");
         int[][] sudoku = null;
-        switch(niveau){
-            case"1":
-                 sudoku = Generator.getInstance().generateGrid(1);
+        switch (niveau) {
+            case "1":
+                sudoku = Generator.getInstance().generateGrid(1);
                 break;
-            case"2":
-                 sudoku = Generator.getInstance().generateGrid(2);
+            case "2":
+                sudoku = Generator.getInstance().generateGrid(2);
                 break;
-            case"3":
-                 sudoku = Generator.getInstance().generateGrid(3);
+            case "3":
+                sudoku = Generator.getInstance().generateGrid(3);
                 break;
-            case"4":
-                 sudoku = Generator.getInstance().generateGrid(4);
+            case "4":
+                sudoku = Generator.getInstance().generateGrid(4);
                 break;
-            case"5":
-                 sudoku = Generator.getInstance().generateGrid(5);
+            case "5":
+                sudoku = Generator.getInstance().generateGrid(5);
                 break;
-
 
         }
-
 
         int x = 0;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 textList.add((EditText) findViewById((R.id.Case1_1) + x));
                 textList.get(x).setText(toString().valueOf(sudoku[i][j]));
-                if(sudoku[i][j]==0)
-                {
+                if (sudoku[i][j] == 0) {
                     textList.get(x).setText("");
                 }
                 x++;
@@ -156,7 +153,6 @@ public class Grille extends Activity {
             }
         });
 
-
     }
 
     //Fonction permettant de remplir la grille
@@ -167,6 +163,5 @@ public class Grille extends Activity {
         //Permet de clear la zone de texte pour réécrire dedans.
         textToEdit.setText("");
     }
-
 }
 
