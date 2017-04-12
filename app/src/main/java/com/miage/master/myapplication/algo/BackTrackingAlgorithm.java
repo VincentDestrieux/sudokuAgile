@@ -109,8 +109,8 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
         }
     }
 
-    //Méthode permettant de visualiser la grille pendant le traitement
-    private void visualGrille() {
+    // Méthode permettant de visualiser la grille pendant le traitement
+    private void visualGrid() {
         StringBuffer sb = new StringBuffer();
         for (int r = 0; r < gridSize; r++) {
             for (int c = 0; c < gridSize; c++)
@@ -130,11 +130,16 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
         fillTab();
         //On charge la Grille avec notre tableau de solution
         Grid resultat = new Grid();
-
+        /*
         for (int i = 0; i < gridSize; i++) {
             for (int j = 0; j < gridSize; j++) {
                 resultat.setMainGrid(i, j, solution[i][j]);
             }
+        }*/
+        PairCoord currentPos;
+        move.toBegin();
+        while ((currentPos = move.Next()) != null) {
+            resultat.setDigit(currentPos,solution[currentPos.getX()-1][currentPos.getY()-1]);
         }
 
         return resultat;
