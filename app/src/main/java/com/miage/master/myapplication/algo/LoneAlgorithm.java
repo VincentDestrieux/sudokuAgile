@@ -47,7 +47,7 @@ public class LoneAlgorithm extends VirtualAlgorithm
                grid.checkComplete();
             }
         }
-        System.out.print(grid.toString());
+        //System.out.print(grid.toString());
         return grid;
     }
 }

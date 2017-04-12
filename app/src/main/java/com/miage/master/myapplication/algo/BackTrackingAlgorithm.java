@@ -139,7 +139,7 @@ public class BackTrackingAlgorithm extends VirtualAlgorithm {
         PairCoord currentPos;
         move.toBegin();
         while ((currentPos = move.Next()) != null) {
-            resultat.setDigit(currentPos,solution[currentPos.getX()-1][currentPos.getY()-1]);
+            resultat.setDigit(currentPos, solution[currentPos.getY() - 1][currentPos.getX() - 1]);
         }
 
         return resultat;

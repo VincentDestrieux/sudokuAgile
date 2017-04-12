@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.miage.master.myapplication.R;
-import com.miage.master.myapplication.algo.BackTrackingAlgorithm;
-import com.miage.master.myapplication.model.Grid;
 
 public class MainActivity extends Activity {
 

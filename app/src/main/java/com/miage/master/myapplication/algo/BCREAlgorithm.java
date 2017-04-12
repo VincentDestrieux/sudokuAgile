@@ -38,7 +38,7 @@ public class BCREAlgorithm extends VirtualAlgorithm {
         } while (validatedCell > 0);
         // Check if ok
         grid.checkComplete();
-        System.out.println(grid.toString());
+        //System.out.println(grid.toString());
         return grid;
     }
 }

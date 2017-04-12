@@ -1,14 +1,13 @@
 package com.miage.master.myapplication;
 
-import com.miage.master.myapplication.algo.BackTrackingAlgorithm;
+import com.miage.master.myapplication.algo.BCRELoneAlgorithm;
 import com.miage.master.myapplication.model.Grid;
 
 import org.junit.Test;
 
-public class BacktrackingTest {
-
+public class BCREAlgorithmTest {
     @Test
-    public void backtrackingTest() throws Exception {
+    public void onCreate() throws Exception {
         easyTestGrid();
         mediumTestGrid();
         hardTestGrid();
@@ -18,9 +17,9 @@ public class BacktrackingTest {
     public void easyTestGrid() {
         long t0 = System.currentTimeMillis();
         Grid easyGrid = TestModel.easyGrille();
-        BackTrackingAlgorithm bta = new BackTrackingAlgorithm();
+        BCRELoneAlgorithm bcre = new BCRELoneAlgorithm();
         try {
-            Grid res = bta.compute(easyGrid);
+            Grid res = bcre.compute(easyGrid);
             System.out.println("------FINISH EASY GRID-------");
             System.out.println(res.toString());
         } catch (Exception e) {
@@ -34,9 +33,9 @@ public class BacktrackingTest {
     public void mediumTestGrid() {
         long t0 = System.currentTimeMillis();
         Grid mediumGrid = TestModel.mediumGrille();
-        BackTrackingAlgorithm bta = new BackTrackingAlgorithm();
+        BCRELoneAlgorithm bcre = new BCRELoneAlgorithm();
         try {
-            Grid res = bta.compute(mediumGrid);
+            Grid res = bcre.compute(mediumGrid);
             System.out.println("------FINISH MEDIUM GRID-------");
             System.out.println(res.toString());
         } catch (Exception e) {
@@ -50,9 +49,9 @@ public class BacktrackingTest {
     public void hardTestGrid() {
         long t0 = System.currentTimeMillis();
         Grid hardGrid = TestModel.hardGrille();
-        BackTrackingAlgorithm bta = new BackTrackingAlgorithm();
+        BCRELoneAlgorithm bcre = new BCRELoneAlgorithm();
         try {
-            Grid res = bta.compute(hardGrid);
+            Grid res = bcre.compute(hardGrid);
             System.out.println("------FINISH HARD GRID-------");
             System.out.println(res.toString());
         } catch (Exception e) {
@@ -66,9 +65,9 @@ public class BacktrackingTest {
     public void demoniacTestGrid() {
         long t0 = System.currentTimeMillis();
         Grid demoniacGrid = TestModel.demoniacGrille();
-        BackTrackingAlgorithm bta = new BackTrackingAlgorithm();
+        BCRELoneAlgorithm bcre = new BCRELoneAlgorithm();
         try {
-            Grid res = bta.compute(demoniacGrid);
+            Grid res = bcre.compute(demoniacGrid);
             System.out.println("------FINISH DEMONIAC GRID-------");
             System.out.println(res.toString());
         } catch (Exception e) {
