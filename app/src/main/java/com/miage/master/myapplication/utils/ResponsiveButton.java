@@ -45,14 +45,14 @@ public class ResponsiveButton extends BaseAdapter {
             view = layoutInflater.inflate(R.layout.activity_buttongrille, viewGroup, false);
 
             LabelButton labelButton = (LabelButton) view;
-            labelButton.setTextSize(10);
+            labelButton.setTextSize(20);
             labelButton.setId(cursor);
 
             if (cursor != 9) {
                 labelButton.setText(String.valueOf(cursor + 1));
                 labelButton.setLabel(cursor + 1);
             } else {
-                labelButton.setText("Supprimer");
+                labelButton.setText("Vider");
                 labelButton.setLabel(0);
             }
             return labelButton;
