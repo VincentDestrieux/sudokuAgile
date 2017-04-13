@@ -202,7 +202,7 @@ public class Grid {
     //Testing main - /!\ Move to Log.d on Android device !
 	public static void main (String[] args)
 	{
-		/*Test basic
+		/*Grille basic
 		Grid grid = new Grid();
 		System.out.println(grid.toString());
 		grid.setDigit(new PairCoord(1,1), 9);

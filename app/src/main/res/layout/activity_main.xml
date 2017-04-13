@@ -54,10 +54,4 @@ tools:layout_editor_absoluteX="0dp">
         android:onClick="exitApp"
         />
 
-    <Button
-        android:id="@+id/buttonTestAlgo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/testAlgo"
-        android:onClick="testAlgo"/>
 </android.support.constraint.ConstraintLayout>
