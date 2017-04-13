@@ -53,6 +53,7 @@ public class Grille extends Activity {
         }
 
         int x = 0;
+        //Boucle d'affichage de grille
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 textList.add((EditText) findViewById((R.id.Case1_1) + x));
@@ -163,5 +164,6 @@ public class Grille extends Activity {
         //Permet de clear la zone de texte pour réécrire dedans.
         textToEdit.setText("");
     }
+
 }
 

@@ -8,6 +8,10 @@ import android.util.Log;
 
 import com.miage.master.myapplication.R;
 
+/**
+ * Classe surchargée pour ajouter l'option de modifier la typographie d'une zone de texte.
+ */
+
 public class CustomTextView extends android.support.v7.widget.AppCompatTextView {
 
     public CustomTextView(Context context, AttributeSet attrs) {
