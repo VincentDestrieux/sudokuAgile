@@ -9,6 +9,7 @@ import android.util.Log;
 import com.miage.master.myapplication.R;
 
 /**
+ * Created by Vincent  Destrieux on 03/04/2017.
  * Classe surchargée pour ajouter l'option de modifier la typographie d'un bouton.
  */
 

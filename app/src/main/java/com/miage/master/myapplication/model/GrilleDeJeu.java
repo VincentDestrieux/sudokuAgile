@@ -1,7 +1,6 @@
 package com.miage.master.myapplication.model;
 
 import android.content.Context;
-import android.view.View;
 
 import com.miage.master.myapplication.vue.Case;
 
@@ -30,10 +29,13 @@ public class GrilleDeJeu {
         int x_pos, y_pos;
         for (x_pos = 0; x_pos < 9; x_pos++) {
             for (y_pos = 0; y_pos < 9; y_pos++) {
+                // Attention on doit inverser la grille pour avoir notre sudoku dans l'ordre
                 sudoku[x_pos][y_pos].setValeurInitiale(grille[y_pos][x_pos]);
-                //Si la valeur est instanciée dans la grille au départ alors
-                //elle n'est pas modifiable par le joueur.
-                if (grille[x_pos][y_pos] != 0) {
+                // Si la valeur est instanciée dans la grille au départ alors
+                // elle n'est pas modifiable par le joueur.
+                // Attention ici aussi il faut l'inverser sinon les cases modifiables
+                // seront décalées par rapport aux cases non modifiables.
+                if (grille[y_pos][x_pos] != 0) {
                     sudoku[x_pos][y_pos].setPasModifiable();
                 }
             }

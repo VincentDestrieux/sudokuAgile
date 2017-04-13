@@ -16,7 +16,7 @@ public class Niveau extends Activity {
     }
 
     public void start(View v) {
-        Intent intent = new Intent(Niveau.this, Test.class);
+        Intent intent = new Intent(Niveau.this, Grille.class);
 
         String niveau = v.getTag().toString();
         Bundle bundle = new Bundle();
