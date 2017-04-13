@@ -7,7 +7,7 @@ import com.miage.master.myapplication.R;
 
 /**
  * Created by Vincent  Destrieux on 13/04/2017.
- * Classe de test
+ * Classe permettant de creer la grille de jeu en fonction du niveau
  */
 
 public class Grille extends Activity {
