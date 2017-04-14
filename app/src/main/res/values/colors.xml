@@ -14,4 +14,8 @@
     <color name="menuStart">#E86D6D</color>
     <color name="menuCenter">#BA1C1C</color>
     <color name="menuEnd">#FF963B</color>
+    <color name="shadowWhite">#FFFFFF</color>
+    <color name="fondButtonGrille">#CBCBCB</color>
+    <color name="boutonGrilleB">#ED8A8A</color>
+    <color name="contourGrilleB">#940000</color>
 </resources>

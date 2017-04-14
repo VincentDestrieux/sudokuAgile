@@ -39,7 +39,7 @@ public PossibilitiesGrid()
 			this.possibilitiesGrid[i][j] = new ArrayList<Integer>(9);
 			this.possibilitiesGrid[i][j].addAll(Arrays.asList(1,2,3,4,5,6,7,8,9));
 		}
-		System.out.println("\n");
+		//System.out.println("\n");
 	}
 }
 
@@ -61,41 +61,41 @@ public boolean update(PairCoord pos, int number)
 private boolean removeFromRow(PairCoord pos, int number)
 {
 	boolean change = false;
-	System.out.println("Delete " + number + " from " + pos.getY() + " row\n");
+	//System.out.println("Delete " + number + " from " + pos.getY() + " row\n");
 	for(int i=0;i<9;i++)
 	{
 		//Si changement dans une case et pas encore de changement noté
 		if(!(this.isSingleton(new PairCoord(i+1, pos.getY()))))
 		{
-			System.out.println("Before :  ("+(i+1)+","+pos.getY()+") -> " + possibilitiesGrid[pos.getY()-1][i]);
+			//System.out.println("Before :  ("+(i+1)+","+pos.getY()+") -> " + possibilitiesGrid[pos.getY()-1][i]);
 			if(possibilitiesGrid[pos.getY()-1][i].remove(new Integer(number)))
 			{
-				System.out.println("After :  ("+(i+1)+","+pos.getY()+") -> " + possibilitiesGrid[pos.getY()-1][i]);
+				//System.out.println("After :  ("+(i+1)+","+pos.getY()+") -> " + possibilitiesGrid[pos.getY()-1][i]);
 				change=true;
 			}
 		}
 	}
-	System.out.println("\n");
+	//System.out.println("\n");
 	return change;
 }
 
 private boolean removeFromColumn(PairCoord pos, int number)
 {
 	boolean change = false;
-	System.out.println("Delete " + number + " from " + pos.getX() + " column\n");
+	//System.out.println("Delete " + number + " from " + pos.getX() + " column\n");
 	for(int i=0;i<9;i++)
 	{
 		if(!(this.isSingleton(new PairCoord(pos.getX(), i+1))))
 		{
-			System.out.println("Before :  ("+pos.getX()+","+(i+1)+") -> " + possibilitiesGrid[i][pos.getX()-1]);
+			//System.out.println("Before :  ("+pos.getX()+","+(i+1)+") -> " + possibilitiesGrid[i][pos.getX()-1]);
 			if(possibilitiesGrid[i][pos.getX()-1].remove(new Integer(number)))
 			{
-				System.out.println("After :  ("+pos.getX()+","+(i+1)+") -> " + possibilitiesGrid[i][pos.getX()-1]);
+				//System.out.println("After :  ("+pos.getX()+","+(i+1)+") -> " + possibilitiesGrid[i][pos.getX()-1]);
 				change=true;
 			}
 		}
 	}
-	System.out.println("\n");
+	//System.out.println("\n");
 	return change;
 }
 
@@ -106,7 +106,7 @@ private boolean removeFromSG(PairCoord pos, int number)
 	//System.out.println(Grid.getSubGrid(pos));
 	PairCoord cornerAssociatedPos = PossibilitiesGrid.CornerSG.get(Grid.getSubGrid(pos));
 	
-	System.out.println("Delete " + number + " from " + cornerAssociatedPos + " SG");
+	//System.out.println("Delete " + number + " from " + cornerAssociatedPos + " SG");
 	boolean change = false;
 	//step 2 : remove number on subgrid 
 	for(int i=0;i<3;i++)
@@ -123,7 +123,7 @@ private boolean removeFromSG(PairCoord pos, int number)
 			}
 		}
 	}
-	System.out.println("\n");
+	//System.out.println("\n");
 	return change;
 }
 
