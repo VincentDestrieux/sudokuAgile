@@ -12,6 +12,10 @@ import com.miage.master.myapplication.R;
 
 public class Grille extends Activity {
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

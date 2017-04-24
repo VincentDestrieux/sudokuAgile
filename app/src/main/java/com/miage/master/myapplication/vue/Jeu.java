@@ -9,17 +9,20 @@ import com.miage.master.myapplication.service.Generator;
  * Created by Vincent  Destrieux on 13/04/2017.
  * Classe représentant la zone de jeu du sudoku
  */
-
 public class Jeu {
     private static Jeu jeu;
 
     private GrilleDeJeu grid = null;
 
-    private int selectedPosX = -1, selectedPosY = -1;
+    private int position_X = -1, position_Y = -1;
 
     private Jeu() {
     }
 
+    /**
+     *
+     * @return
+     */
     public static Jeu getJeu() {
         if (jeu == null) {
             jeu = new Jeu();
@@ -27,6 +30,11 @@ public class Jeu {
         return jeu;
     }
 
+    /**
+     *
+     * @param context
+     * @param niveau
+     */
     public void creerGrille(Context context, String niveau) {
         int[][] sudoku = null;
         switch (niveau) {
@@ -54,14 +62,23 @@ public class Jeu {
         return grid;
     }
 
-    public void setSelectedPos(int x, int y) {
-        selectedPosX = x;
-        selectedPosY = y;
+    /**
+     *
+     * @param pos_x
+     * @param pos_y
+     */
+    public void setSelectedPos(int pos_x, int pos_y) {
+        position_X = pos_x;
+        position_Y = pos_y;
     }
 
+    /**
+     *
+     * @param chiffre
+     */
     public void setChiffre(int chiffre) {
-        if (selectedPosX != -1 && selectedPosY != -1) {
-            grid.setItem(selectedPosX, selectedPosY, chiffre);
+        if (position_X != -1 && position_Y != -1) {
+            grid.setItem(position_X, position_Y, chiffre);
         }
         //Ici vérifier que le jeu n'est pas terminé et donc gagné fonction a implementer
         //grid.checkGame();

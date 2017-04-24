@@ -9,12 +9,20 @@ import com.miage.master.myapplication.R;
 
 public class Niveau extends Activity {
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_niveau);
     }
 
+    /**
+     *
+     * @param v
+     */
     public void start(View v) {
         Intent intent = new Intent(Niveau.this, Grille.class);
 
@@ -26,6 +34,10 @@ public class Niveau extends Activity {
         startActivity(intent);
     }
 
+    /**
+     *
+     * @param v
+     */
     public void reconnaissance(View v) {
         Intent intent = new Intent(Niveau.this, Reconnaissance.class);
         startActivity(intent);

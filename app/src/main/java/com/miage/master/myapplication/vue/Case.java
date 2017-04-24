@@ -10,10 +10,9 @@ import android.graphics.Rect;
 import com.miage.master.myapplication.utils.CustomViewCase;
 
 /**
- * Created by Vincent  Destrieux on 13/04/2017.
+ * Created by Vincent Destrieux on 13/04/2017.
  * Cette classe permet de creer les 81 cases de la grille
  */
-
 public class Case extends CustomViewCase {
 
     //Chaque case est un paint
@@ -24,6 +23,10 @@ public class Case extends CustomViewCase {
         mPaint = new Paint();
     }
 
+    /**
+     *
+     * @param canvas
+     */
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -32,6 +35,10 @@ public class Case extends CustomViewCase {
         dessineLignes(canvas);
     }
 
+    /**
+     *
+     * @param canvas
+     */
     private void dessineChiffre(Canvas canvas) {
         mPaint.setColor(Color.BLACK);
         mPaint.setTextSize(80);
@@ -46,6 +53,10 @@ public class Case extends CustomViewCase {
         }
     }
 
+    /**
+     *
+     * @param canvas
+     */
     private void dessineLignes(Canvas canvas) {
         mPaint.setColor(Color.BLACK);
         mPaint.setStrokeWidth(10);

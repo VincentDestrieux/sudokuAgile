@@ -8,7 +8,6 @@ import android.view.View;
  * Cette classe est le modèle de chaque case de la grille de sudoku
  * Case.java hérite de cette classe
  */
-
 public class CustomViewCase extends View {
 
     private int valeur;
@@ -19,6 +18,11 @@ public class CustomViewCase extends View {
         super(context);
     }
 
+    /**
+     *
+     * @param widthMeasureSpec
+     * @param heightMeasureSpec
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, widthMeasureSpec);

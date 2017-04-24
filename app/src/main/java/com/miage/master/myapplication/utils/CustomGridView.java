@@ -19,6 +19,11 @@ public class CustomGridView extends GridView {
 
     private Context context;
 
+    /**
+     *
+     * @param context
+     * @param attrs
+     */
     public CustomGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
@@ -35,6 +40,11 @@ public class CustomGridView extends GridView {
         });
     }
 
+    /**
+     *
+     * @param widthMeasureSpec
+     * @param heightMeasureSpec
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, widthMeasureSpec);

@@ -7,13 +7,16 @@ import com.miage.master.myapplication.vue.Case;
 /**
  * Created by Vincent  Destrieux on 13/04/2017.
  */
-
 public class GrilleDeJeu {
 
     //On créé un tableau de Case représentant notre grille de sudoku
     private Case[][] sudoku = new Case[9][9];
     private Context context;
 
+    /**
+     *
+     * @param context
+     */
     public GrilleDeJeu(Context context) {
         this.context = context;
         int x_pos, y_pos;
@@ -25,6 +28,10 @@ public class GrilleDeJeu {
         }
     }
 
+    /**
+     *
+     * @param grille
+     */
     public void setGrilleDeJeu(int[][] grille) {
         int x_pos, y_pos;
         for (x_pos = 0; x_pos < 9; x_pos++) {
@@ -42,24 +49,44 @@ public class GrilleDeJeu {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public Case[][] getGrilleDeJeu() {
         return sudoku;
     }
 
-    public void setItem(int selectedPosX, int selectedPosY, int chiffre) {
-        sudoku[selectedPosX][selectedPosY].setValeur(chiffre);
+    /**
+     *
+     * @param position_X
+     * @param position_Y
+     * @param chiffre
+     */
+    public void setItem(int position_X, int position_Y, int chiffre) {
+        sudoku[position_X][position_Y].setValeur(chiffre);
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     * @return
+     */
     public Case getItem(int x, int y) {
         return sudoku[x][y];
     }
 
+    /**
+     *
+     * @param cursor
+     * @return
+     */
     public Case getItem(int cursor) {
         int x_pos = cursor % 9;
         int y_pos = cursor / 9;
 
         return sudoku[x_pos][y_pos];
     }
-
 
 }
