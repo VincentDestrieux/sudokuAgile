@@ -47,7 +47,11 @@ public class CustomViewCase extends View {
     }
 
     public int getValeur() {
-        return valeur;
+        return this.valeur;
+    }
+
+    public boolean getModifiable(){
+        return this.modifiable;
     }
 
 }

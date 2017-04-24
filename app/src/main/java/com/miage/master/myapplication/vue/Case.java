@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
 
+import com.miage.master.myapplication.R;
 import com.miage.master.myapplication.utils.CustomViewCase;
 
 /**
@@ -24,28 +25,32 @@ public class Case extends CustomViewCase {
     }
 
     /**
-     *
      * @param canvas
      */
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        dessineFonds(canvas);
         dessineChiffre(canvas);
         dessineLignes(canvas);
     }
 
     /**
-     *
      * @param canvas
      */
     private void dessineChiffre(Canvas canvas) {
-        mPaint.setColor(Color.BLACK);
-        mPaint.setTextSize(80);
+        if (!getModifiable()) {
+            mPaint.setColor(Color.BLACK);
+        } else {
+            mPaint.setColor(getResources().getColor(R.color.pen));
+        }
         mPaint.setStyle(Style.FILL);
+        mPaint.setTextSize(80);
 
         //On dessine un rectangle qui contiendra le chiffre
         Rect bounds = new Rect();
+
         mPaint.getTextBounds(String.valueOf(getValeur()), 0, String.valueOf(getValeur()).length(), bounds);
 
         if (getValeur() != 0) {
@@ -54,10 +59,10 @@ public class Case extends CustomViewCase {
     }
 
     /**
-     *
      * @param canvas
      */
     private void dessineLignes(Canvas canvas) {
+
         mPaint.setColor(Color.BLACK);
         mPaint.setStrokeWidth(10);
         mPaint.setStyle(Style.STROKE);
@@ -65,4 +70,12 @@ public class Case extends CustomViewCase {
         canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
     }
 
+    /**
+     * @param canvas
+     */
+    private void dessineFonds(Canvas canvas) {
+        if (!getModifiable()) {
+            canvas.drawColor(getResources().getColor(R.color.fondGrille));
+        }
+    }
 }

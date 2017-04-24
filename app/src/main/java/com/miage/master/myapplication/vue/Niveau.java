@@ -10,7 +10,6 @@ import com.miage.master.myapplication.R;
 public class Niveau extends Activity {
 
     /**
-     *
      * @param savedInstanceState
      */
     @Override
@@ -20,27 +19,24 @@ public class Niveau extends Activity {
     }
 
     /**
-     *
      * @param v
      */
     public void start(View v) {
-        Intent intent = new Intent(Niveau.this, Grille.class);
+        Bundle bundle = getIntent().getExtras();
+        String mode = bundle.getString("mode");
+        if (mode.equals("classique")) {
+            Intent intent = new Intent(Niveau.this, Grille.class);
 
-        String niveau = v.getTag().toString();
-        Bundle bundle = new Bundle();
-        bundle.putString("niveau", niveau);
+            String niveau = v.getTag().toString();
+            Bundle bundleNiveau = new Bundle();
+            bundleNiveau.putString("niveau", niveau);
 
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
-
-    /**
-     *
-     * @param v
-     */
-    public void reconnaissance(View v) {
-        Intent intent = new Intent(Niveau.this, Reconnaissance.class);
-        startActivity(intent);
+            intent.putExtras(bundleNiveau);
+            startActivity(intent);
+        } else if (mode.equals("graphique")) {
+            Intent intent = new Intent(Niveau.this, Reconnaissance.class);
+            startActivity(intent);
+        }
     }
 
     public void retour(View v) {
