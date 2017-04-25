@@ -14,6 +14,8 @@ public class CustomViewCase extends View {
     // Permet de définir si une case est modifiable ou non
     private boolean modifiable = true;
 
+    protected int id;
+
     public CustomViewCase(Context context) {
         super(context);
     }
@@ -52,6 +54,10 @@ public class CustomViewCase extends View {
 
     public boolean getModifiable(){
         return this.modifiable;
+    }
+
+    public int getId() {
+        return this.id;
     }
 
 }

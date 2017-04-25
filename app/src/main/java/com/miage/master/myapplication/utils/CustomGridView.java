@@ -35,7 +35,7 @@ public class CustomGridView extends GridView {
             public void onItemClick(AdapterView<?> adapterView, View view, int cursor, long key) {
                 int x = cursor % 9;
                 int y = cursor / 9;
-                Jeu.getJeu().setSelectedPos(x, y);
+                Jeu.getJeu().setPositionSelection(x, y);
             }
         });
     }

@@ -24,19 +24,18 @@ public class Niveau extends Activity {
     public void start(View v) {
         Bundle bundle = getIntent().getExtras();
         String mode = bundle.getString("mode");
-        if (mode.equals("classique")) {
-            Intent intent = new Intent(Niveau.this, Grille.class);
 
-            String niveau = v.getTag().toString();
-            Bundle bundleNiveau = new Bundle();
-            bundleNiveau.putString("niveau", niveau);
+        Intent intent = new Intent(Niveau.this, Grille.class);
 
-            intent.putExtras(bundleNiveau);
-            startActivity(intent);
-        } else if (mode.equals("graphique")) {
-            Intent intent = new Intent(Niveau.this, Reconnaissance.class);
-            startActivity(intent);
-        }
+        String niveau = v.getTag().toString();
+        Bundle bundleNiveau = new Bundle();
+        bundleNiveau.putString("niveau", niveau);
+        Bundle bundleMode = new Bundle();
+        bundleMode.putString("mode", mode);
+
+        intent.putExtras(bundleNiveau);
+        intent.putExtras(bundleMode);
+        startActivity(intent);
     }
 
     public void retour(View v) {

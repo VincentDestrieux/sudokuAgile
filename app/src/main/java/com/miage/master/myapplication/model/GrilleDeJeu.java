@@ -20,10 +20,13 @@ public class GrilleDeJeu {
     public GrilleDeJeu(Context context) {
         this.context = context;
         int x_pos, y_pos;
+        //Chaque case dispose d'un id unique pour définir leurs positions (commence a 1)
+        int id = 1;
         //Boucle permettant de dessiner la grille du sudoku avec toutes ses cases
         for (x_pos = 0; x_pos < 9; x_pos++) {
             for (y_pos = 0; y_pos < 9; y_pos++) {
-                sudoku[x_pos][y_pos] = new Case(context);
+                sudoku[x_pos][y_pos] = new Case(context, id);
+                id++;
             }
         }
     }

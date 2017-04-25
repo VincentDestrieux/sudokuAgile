@@ -80,7 +80,7 @@ public class Jeu {
      * @param pos_x
      * @param pos_y
      */
-    public void setSelectedPos(int pos_x, int pos_y) {
+    public void setPositionSelection(int pos_x, int pos_y) {
         position_X = pos_x;
         position_Y = pos_y;
     }
