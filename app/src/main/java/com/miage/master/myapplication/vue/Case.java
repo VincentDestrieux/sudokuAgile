@@ -85,7 +85,6 @@ public class Case extends CustomViewCase {
         mPaint.setColor(Color.BLACK);
         mPaint.setStrokeWidth(10);
         mPaint.setStyle(Style.STROKE);
-
         canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
     }
 

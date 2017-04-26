@@ -15,7 +15,7 @@ public class Jeu {
     private GrilleDeJeu grid = null;
 
     private int position_X = -1, position_Y = -1;
-
+    private GenerationGrille generationGrille = new GenerationGrille();
 
     private Jeu() {
     }
@@ -56,7 +56,7 @@ public class Jeu {
                 break;
         }
 
-     /*   int[][] sudoku = {{0, 0, 0, 0, 0, 0, 0, 0, 0},
+      /*int[][] sudoku = {{0, 0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 4, 7, 6, 9, 1, 8, 2, 0},
                 {0, 3, 0, 0, 0, 0, 0, 4, 0},
                 {0, 6, 0, 3, 0, 2, 0, 7, 0},
@@ -69,6 +69,11 @@ public class Jeu {
         grid = new GrilleDeJeu(context);
         grid.setGrilleDeJeu(sudoku);
 
+     /*   generationGrille.diggingHole(52,sudoku);
+
+        if (generationGrille.getNbSol() > 1)
+            System.out.println("Erreur pruning technique, plus d'une solution !!!!");
+*/
     }
 
     public GrilleDeJeu getGrid() {
