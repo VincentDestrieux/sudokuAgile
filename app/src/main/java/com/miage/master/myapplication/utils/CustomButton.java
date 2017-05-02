@@ -12,13 +12,17 @@ import com.miage.master.myapplication.R;
  * Created by Vincent  Destrieux on 03/04/2017.
  * Classe surchargée pour ajouter l'option de modifier la typographie d'un bouton.
  */
-
 public class CustomButton extends android.support.v7.widget.AppCompatButton {
 
+    /**
+     *
+     * @param context
+     * @param attrs
+     */
     public CustomButton(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        //Typeface.createFromAsset doesn't work in the layout editor. Skipping...
+        //Typeface.createFromAsset ne marche pas dans l'éditeur de layout.
         if (isInEditMode()) {
             return;
         }
@@ -36,6 +40,10 @@ public class CustomButton extends android.support.v7.widget.AppCompatButton {
         setTypeFace(fontName);
     }
 
+    /**
+     *
+     * @param fontName
+     */
     public void setTypeFace(String fontName) {
         if (fontName != null) {
             try {

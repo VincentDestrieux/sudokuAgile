@@ -7,9 +7,13 @@ import android.widget.GridView;
 /**
  * Created by Vincent  Destrieux on 13/04/2017.
  */
-
 public class CustomButtonGridView extends GridView {
 
+    /**
+     *
+     * @param context
+     * @param attrs
+     */
     public CustomButtonGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
 

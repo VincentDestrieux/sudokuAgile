@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond1"
+    tools:context="com.miage.master.myapplication.vue.Mode">
+
+
+    <com.miage.master.myapplication.utils.CustomButton
+        android:id="@+id/boutonModeClassique"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bouton_menu"
+        android:onClick="startMode1"
+        android:shadowColor="@color/shadow"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/mode1"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:font="chowfun.TTF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.300" />
+
+    <com.miage.master.myapplication.utils.CustomButton
+        android:id="@+id/boutonModeGraphique"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bouton_menu"
+        android:onClick="startMode2"
+        android:shadowColor="@color/shadow"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/mode2"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:font="chowfun.TTF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.600" />
+
+
+    <com.miage.master.myapplication.utils.CustomButton
+        android:id="@+id/buttonRetour"
+        android:layout_width="89dp"
+        android:layout_height="83dp"
+        android:background="@drawable/fleur"
+        android:onClick="retour"
+        android:text="@string/retour"
+        android:textColor="@color/textBlack"
+        android:textSize="12sp"
+        app:font="chowfun.TTF"
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="-11dp" />
+
+</android.support.constraint.ConstraintLayout>

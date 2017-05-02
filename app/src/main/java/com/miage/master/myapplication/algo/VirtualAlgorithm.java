@@ -1,8 +1,5 @@
 package com.miage.master.myapplication.algo;
 
-import com.miage.master.myapplication.algo.LeftRightTopBottomPattern;
-import com.miage.master.myapplication.algo.MovingPattern;
-import com.miage.master.myapplication.algo.SolvingAlgorithm;
 import com.miage.master.myapplication.model.Grid;
 
 /**

@@ -18,4 +18,6 @@
     <color name="fondButtonGrille">#CBCBCB</color>
     <color name="boutonGrilleB">#ED8A8A</color>
     <color name="contourGrilleB">#940000</color>
+    <color name="pen">#00008B</color>
+    <color name="fondGrille">#E1E2E2</color>
 </resources>

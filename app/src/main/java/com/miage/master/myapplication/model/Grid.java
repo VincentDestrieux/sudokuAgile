@@ -198,66 +198,8 @@ public class Grid {
         possibleGrid.LoneBlock(pos);
         return this.checkComplete();
     }
-/*
-    //Testing main - /!\ Move to Log.d on Android device !
-	public static void main (String[] args)
-	{
-		/*Grille basic
-		Grid grid = new Grid();
-		System.out.println(grid.toString());
-		grid.setDigit(new PairCoord(1,1), 9);
-		grid.setDigit(new PairCoord(2,2), 8);
-		grid.setDigit(new PairCoord(3,3), 7);
-		System.out.println(grid.toString());*/
-    //System.out.println(grid.checkSG());
 
-		/*int[][] easy = {{5,6,0,8,4,7,0,0,0},
-						{3,0,9,0,0,0,6,0,0},
-						{0,0,8,0,0,0,0,0,0},
-						{0,1,0,0,8,0,0,4,0},
-						{7,9,0,6,0,2,0,1,8},
-						{0,5,0,0,3,0,0,9,0},
-						{0,0,0,0,0,0,2,0,0},
-						{0,0,6,0,0,0,8,0,7},
-						{0,0,0,3,1,6,0,5,9}};*/
-/*
-		int[][] easy = {{0,3,4,0,0,0,0,9,0},
-						{6,0,0,0,0,8,2,1,4},
-						{0,0,1,0,2,7,0,0,0},
-						{4,0,9,0,8,3,0,5,0},
-						{5,6,0,0,0,0,0,8,7},
-						{0,2,0,5,6,0,4,0,1},
-						{0,0,0,2,1,0,8,0,0},
-						{8,5,7,9,0,0,0,0,6},
-						{0,9,0,0,0,0,3,4,0}};
-
-		int[][] medium = {{4,0,9,8,5,6,7,0,0},
-						  {0,0,7,4,0,2,6,8,0},
-				    	  {5,0,8,0,0,7,0,0,4},
-				          {7,0,5,0,6,0,0,0,0},
-				          {6,0,4,2,0,3,5,0,0},
-						  {3,8,0,0,7,0,0,0,6},
-						  {0,5,6,9,4,1,0,0,0},
-						  {9,0,0,0,2,8,0,5,0},
-						  {2,0,0,0,0,0,0,0,8}};
-
-		//Grid easyGrid = new Grid(easy);
-		Grid easyGrid = new Grid(medium);
-		System.out.println(easyGrid);
-
-
-		/*LeftRightTopBottomPattern move = new LeftRightTopBottomPattern();
-		for(int i=1;i<82;i++)
-		{
-			System.out.println(move.Next());
-		}*/
-
-    //System.out.println(easyGrid.toString());
-
-    //BCREAlgorithm algo = new BCREAlgorithm();
-//		BCRELoneAlgorithm algo = new BCRELoneAlgorithm();
-//		easyGrid = algo.compute(easyGrid);
-//		System.out.println(easyGrid.toString());
-//	}
-
+    public PossibilitiesGrid getPossibleGrid() {
+        return possibleGrid;
+    }
 }

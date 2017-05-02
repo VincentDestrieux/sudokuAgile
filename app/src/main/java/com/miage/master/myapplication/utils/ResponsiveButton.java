@@ -12,7 +12,6 @@ import com.miage.master.myapplication.R;
 /**
  * Created by Vincent  Destrieux on 13/04/2017.
  */
-
 public class ResponsiveButton extends BaseAdapter {
 
     private Context context;
@@ -21,22 +20,44 @@ public class ResponsiveButton extends BaseAdapter {
         this.context = context;
     }
 
+    /**
+     *
+     * @return
+     */
     //Nombre de bouton (1,2,3,4,5,6,7,8,9,remise a zero)
     @Override
     public int getCount() {
         return 10;
     }
 
+    /**
+     *
+     * @param cursor
+     * @return
+     */
     @Override
     public Object getItem(int cursor) {
         return null;
     }
 
+    /**
+     *
+     * @param cursor
+     * @return
+     */
     @Override
     public long getItemId(int cursor) {
         return cursor;
     }
 
+
+    /**
+     *
+     * @param cursor
+     * @param view
+     * @param viewGroup
+     * @return
+     */
     @Override
     public View getView(int cursor, View view, ViewGroup viewGroup) {
 

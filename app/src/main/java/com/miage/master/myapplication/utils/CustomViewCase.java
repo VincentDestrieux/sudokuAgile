@@ -8,17 +8,23 @@ import android.view.View;
  * Cette classe est le modèle de chaque case de la grille de sudoku
  * Case.java hérite de cette classe
  */
-
 public class CustomViewCase extends View {
 
     private int valeur;
     // Permet de définir si une case est modifiable ou non
     private boolean modifiable = true;
 
+    protected int id;
+
     public CustomViewCase(Context context) {
         super(context);
     }
 
+    /**
+     *
+     * @param widthMeasureSpec
+     * @param heightMeasureSpec
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, widthMeasureSpec);
@@ -43,7 +49,15 @@ public class CustomViewCase extends View {
     }
 
     public int getValeur() {
-        return valeur;
+        return this.valeur;
+    }
+
+    public boolean getModifiable(){
+        return this.modifiable;
+    }
+
+    public int getId() {
+        return this.id;
     }
 
 }
