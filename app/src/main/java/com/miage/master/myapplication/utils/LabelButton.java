@@ -1,10 +1,14 @@
 package com.miage.master.myapplication.utils;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.miage.master.myapplication.vue.Jeu;
+import com.miage.master.myapplication.vue.Mode;
 
 /**
  * Created by Vincent  Destrieux on 13/04/2017.
@@ -30,6 +34,25 @@ class LabelButton extends android.support.v7.widget.AppCompatButton implements V
     @Override
     public void onClick(View v) {
         Jeu.getJeu().setChiffre(label);
+        if (Jeu.getJeu().checkGame() == true){
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
+            // Set the dialog title
+            builder.setTitle("Bravo ! Vous avez gagné !")
+                    // Set the action buttons
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            Intent intent = new Intent(getContext(), Mode.class);
+                            getContext().startActivities(new Intent[]{intent});
+                        }
+                    });
+
+
+            AlertDialog alertDialog =  builder.create();
+            alertDialog.show();
+        }
+
     }
 
     /**
@@ -39,4 +62,9 @@ class LabelButton extends android.support.v7.widget.AppCompatButton implements V
     public void setLabel(int label) {
         this.label = label;
     }
+
+
+
+
+
 }
