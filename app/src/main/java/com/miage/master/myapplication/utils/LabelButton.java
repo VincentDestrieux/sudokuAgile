@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.miage.master.myapplication.vue.Jeu;
 import com.miage.master.myapplication.vue.Mode;
+import com.miage.master.myapplication.vue.Niveau;
 
 /**
  * Created by Vincent  Destrieux on 13/04/2017.
@@ -44,6 +45,13 @@ class LabelButton extends android.support.v7.widget.AppCompatButton implements V
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
                             Intent intent = new Intent(getContext(), Mode.class);
+                            getContext().startActivities(new Intent[]{intent});
+                        }
+                    })
+                    .setNegativeButton("Rejouer", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            Intent intent = new Intent(getContext(), Niveau.class);
                             getContext().startActivities(new Intent[]{intent});
                         }
                     }) ;
