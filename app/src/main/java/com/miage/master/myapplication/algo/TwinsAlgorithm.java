@@ -108,7 +108,7 @@ public class TwinsAlgorithm extends VirtualAlgorithm {
     public Grid compute(Grid grid) {
         Grid resultat;
         setProcessing(grid);
-        resolveEnLigne();
+        //resolveEnLigne();
         resolveEnColonne();
         resultat = getProcessing();
         return resultat;

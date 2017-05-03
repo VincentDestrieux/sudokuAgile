@@ -12,7 +12,7 @@ public class PossibilitiesGrid {
     private ArrayList<Integer>[][] possibilitiesGrid;
 
     // Contain the corner of 9 SG
-    private static final ArrayList<PairCoord> CornerSG = new ArrayList<PairCoord>() {
+    public static final ArrayList<PairCoord> CornerSG = new ArrayList<PairCoord>() {
         {
             add(new PairCoord(1, 1));
             add(new PairCoord(4, 1));

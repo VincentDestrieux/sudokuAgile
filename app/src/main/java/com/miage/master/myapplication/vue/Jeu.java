@@ -21,7 +21,6 @@ public class Jeu {
     }
 
     /**
-     *
      * @return
      */
     public static Jeu getJeu() {
@@ -32,7 +31,6 @@ public class Jeu {
     }
 
     /**
-     *
      * @param context
      * @param niveau
      */
@@ -81,7 +79,6 @@ public class Jeu {
     }
 
     /**
-     *
      * @param pos_x
      * @param pos_y
      */
@@ -91,7 +88,6 @@ public class Jeu {
     }
 
     /**
-     *
      * @param chiffre
      */
     public void setChiffre(int chiffre) {
@@ -99,61 +95,60 @@ public class Jeu {
         GenerationGrille g = new GenerationGrille();
         int[][] sudoku = new int[9][9];
 
-    if(chiffre!= 0) {
+        if (chiffre != 0) {
 
 
-        for (int x = 0; x < 9; x++)
-            for (int y = 0; y < 9; y++) {
-                sudoku[x][y] = grid.getItem(x, y).getValeur();
+            for (int x = 0; x < 9; x++)
+                for (int y = 0; y < 9; y++) {
+                    sudoku[x][y] = grid.getItem(x, y).getValeur();
 
-                System.out.println(grid.getItem(x, y).getValeur());
+                    System.out.println(grid.getItem(x, y).getValeur());
+                }
+            int posi_courrante = 9 * (position_Y + 1) - (9 - (position_X + 1));
+            System.out.println("pos courante : " + posi_courrante);
+            System.out.println("pos X : " + position_X);
+            System.out.println("pos Y : " + position_Y);
+
+
+            //if   (g.checkConflitGrille(sudoku)){
+            //   grid.setItem(position_X, position_Y, chiffre);
+            //      }
+            if (g.checkInsertionLigne(sudoku, chiffre, position_Y) == true) {
+                System.out.println("Bon trou en ligne");
+            } else {
+                System.out.println("Mauvais trou en ligne");
+                correct = false;
             }
-        int posi_courrante = 9 * (position_Y + 1) - (9 - (position_X + 1));
-        System.out.println("pos courante : " + posi_courrante);
-        System.out.println("pos X : " + position_X);
-        System.out.println("pos Y : " + position_Y);
+            if (g.checkInsertionColonne(sudoku, chiffre, position_X) == true && correct == true) {
+                System.out.println("Bon trou en colonne");
+            } else {
+                System.out.println("Mauvais trou en colonne");
+                correct = false;
 
+            }
 
-        //if   (g.checkConflitGrille(sudoku)){
-        //   grid.setItem(position_X, position_Y, chiffre);
-        //      }
-        if (g.checkInsertionLigne(sudoku, chiffre, position_Y) == true) {
-            System.out.println("Bon trou en ligne");
-        } else {
-            System.out.println("Mauvais trou en ligne");
-            correct = false;
-        }
-        if (g.checkInsertionColonne(sudoku, chiffre, position_X) == true && correct == true) {
-            System.out.println("Bon trou en colonne");
-        } else {
-            System.out.println("Mauvais trou en colonne");
-            correct = false;
+            if (g.checkInsertionCarre(sudoku, position_X, position_Y, chiffre) == false && correct == true) {
+                System.out.println("Bon trou en Carre");
 
-        }
+            } else {
+                System.out.println("Mauvais trou en Carre");
+                correct = false;
+            }
 
-        if (g.checkInsertionCarre(sudoku, position_X, position_Y, chiffre) == false && correct == true) {
-            System.out.println("Bon trou en Carre");
+            if (correct == true) {
+                grid.setItem(position_X, position_Y, chiffre);
 
-        } else {
-            System.out.println("Mauvais trou en Carre");
-            correct = false;
-        }
+            }
 
-        if (correct == true) {
+        } else if (chiffre == 0) {
             grid.setItem(position_X, position_Y, chiffre);
-
         }
-
-    }
-    else if (chiffre==0){
-        grid.setItem(position_X, position_Y, chiffre);
-    }
-            // sudoku[position_Y][position_Y]=chiffre;
-            //grid.setGrilleDeJeu(sudoku);
+        // sudoku[position_Y][position_Y]=chiffre;
+        //grid.setGrilleDeJeu(sudoku);
 
     }
 
-        //Ici vérifier que le jeu n'est pas terminé et donc gagné fonction a implementer
-        //grid.checkGame();
+    //Ici vérifier que le jeu n'est pas terminé et donc gagné fonction a implementer
+    //grid.checkGame();
 }
 
