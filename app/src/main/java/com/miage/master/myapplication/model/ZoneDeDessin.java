@@ -23,7 +23,7 @@ public class ZoneDeDessin extends View {
         drawPaint = new Paint();
         drawPaint.setColor(paintColor);
         drawPaint.setAntiAlias(true);
-        drawPaint.setStrokeWidth(20);
+        drawPaint.setStrokeWidth(70);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
@@ -65,5 +65,4 @@ public class ZoneDeDessin extends View {
         invalidate();
         return true;
     }
-
 }
