@@ -46,7 +46,7 @@ class LabelButton extends android.support.v7.widget.AppCompatButton implements V
                             Intent intent = new Intent(getContext(), Mode.class);
                             getContext().startActivities(new Intent[]{intent});
                         }
-                    });
+                    }) ;
 
 
             AlertDialog alertDialog =  builder.create();
