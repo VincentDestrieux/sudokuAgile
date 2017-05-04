@@ -3,9 +3,12 @@ package com.miage.master.myapplication.vue;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.RenderScript;
 import android.view.View;
 
 import com.miage.master.myapplication.R;
+
+import network.CNNdroid;
 
 public class MainActivity extends Activity {
 

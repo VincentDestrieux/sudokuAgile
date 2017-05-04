@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.miage.master.myapplication.R;
-import com.miage.master.myapplication.service.GenerationGrille;
 
 /**
  * Created by Vincent  Destrieux on 13/04/2017.
@@ -38,6 +37,7 @@ public class Grille extends Activity {
         }
 
         Jeu.getJeu().creerGrille(this, niveau);
+
     }
 
 }
