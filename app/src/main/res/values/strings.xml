@@ -12,4 +12,7 @@
     <string name="testAlgo">Test Algo</string>
     <string name="mode1">Classique</string>
     <string name="mode2">Graphique</string>
+    <string name="CNNcapture">OK</string>
+    <string name="classic_tag">1</string>
+    <string name="graphic_tag">2</string>
 </resources>

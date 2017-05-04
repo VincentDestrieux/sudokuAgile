@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:horizontalSpacing="0dp"
         android:numColumns="9"
-        android:verticalSpacing="0dp" />
+        android:verticalSpacing="0dp"
+        android:tag="@string/classic_tag"/>
 
     <com.miage.master.myapplication.utils.CustomButtonGridView
         android:id="@+id/customButtonGridView"

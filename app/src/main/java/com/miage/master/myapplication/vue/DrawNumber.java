@@ -3,6 +3,7 @@ package com.miage.master.myapplication.vue;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -11,37 +12,29 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.renderscript.RenderScript;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
+import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 
 import com.miage.master.myapplication.R;
 import com.miage.master.myapplication.model.ZoneDeDessin;
 import com.miage.master.myapplication.model.bmpCoord;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-
 import network.CNNdroid;
 
-import static android.graphics.Bitmap.createScaledBitmap;
 import static android.graphics.Color.red;
 
-public class Reconnaissance extends Activity {
+public class DrawNumber extends Activity {
 
-    private RelativeLayout rl;
     private ZoneDeDessin dessin;
-    private Button push;
-    private ImageView imageView;
+    private LinearLayout layout;
     private Bitmap bmp;
+    private Button myButton;
 
     //CNNdroid part
     private RenderScript myRenderScript;
@@ -57,7 +50,7 @@ public class Reconnaissance extends Activity {
         ProgressDialog progDailog;
 
         protected void onPreExecute() {
-            progDailog = new ProgressDialog(Reconnaissance.this);
+            progDailog = new ProgressDialog(DrawNumber.this);
             progDailog.setMessage("Starting CNNdroid RenderScript Module - Sudoku - RD");
             progDailog.setIndeterminate(false);
             progDailog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -86,12 +79,17 @@ public class Reconnaissance extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_reconnaissance);
-
-        push = (Button) findViewById(R.id.button);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_draw_number);
         addZoneDeDessin();
-        imageView = (ImageView) findViewById(R.id.imageView);
+
+        myButton = (Button)findViewById(R.id.buttonCNNdroid);
+
+        myButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                compute();
+            }
+        });
 
         //Permissions ?
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -105,26 +103,7 @@ public class Reconnaissance extends Activity {
         }
 
         myRenderScript = RenderScript.create(this);
-        new prepareModel().execute(myRenderScript);
-
-        push.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                View zoneDeDessin = findViewById(R.id.zoneDeDessin);
-                bmp = getBitmapFromView(zoneDeDessin);
-                //bmp = cropNumber(bmp);
-                bmp = createScaledBitmap(bmp,28,28,true);
-                imageView.setImageBitmap(bmp);
-                //creerImage(bmp);
-                try {
-                    analysis(bmp);
-                }
-                catch(Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        });
+        new DrawNumber.prepareModel().execute(myRenderScript);
     }
 
     //Result of permissionRequest from onCreate method
@@ -142,41 +121,18 @@ public class Reconnaissance extends Activity {
         }
     }
 
-    //Methode permettant de mettre l'image dans un objet de type Bitmap
-    public Bitmap Capture(View v) {
-        View rootview = v.getRootView();
-        rootview.setDrawingCacheEnabled(true);
-        Bitmap bitmap1 = Bitmap.createBitmap(rootview.getDrawingCache(),0,0,getWindowManager().getDefaultDisplay().getWidth(),getWindowManager().getDefaultDisplay().getHeight()/2);
-        rootview.setDrawingCacheEnabled(false);
-        return bitmap1;
-    }
-
-    //Methode permettant de retransmettre l'image sur l'imageView
-    public void creerImage(Bitmap bmp) {
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.PNG, 40, bytes);
-        File file = new File(Environment.getExternalStorageDirectory() +
-                "/image.png");
-        try {
-            file.createNewFile();
-            FileOutputStream outputStream = new FileOutputStream(file);
-            outputStream.write(bytes.toByteArray());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     //Cette méthode permet de creer la Zone de dessin et de l'inclure dans la Vue.
     private void addZoneDeDessin() {
-        rl = (RelativeLayout) findViewById(R.id.relativeL);
+        layout = (LinearLayout) findViewById(R.id.layout);
 
         dessin = new ZoneDeDessin(this);
         dessin.setBackgroundColor(Color.WHITE);
-        dessin.setLayoutParams(new RelativeLayout.LayoutParams(getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight()/2));
+        //dessin.setLayoutParams(new LinearLayout.LayoutParams(getWindowManager().getDefaultDisplay().getWidth(), getWindowManager().getDefaultDisplay().getHeight()));
+        //FIX NEEDED HERE
+        dessin.setLayoutParams(new LinearLayout.LayoutParams(800,800));
         dessin.setId(R.id.zoneDeDessin);
 
-        rl.addView(dessin);
+        layout.addView(dessin);
     }
 
     //the bmp given is an 28*28 bitmap who's containing the draw number
@@ -210,13 +166,13 @@ public class Reconnaissance extends Activity {
         }
 
         //Affichage de la matrice 28*28
-        /*for (int i = 0; i < 28; i++)
+        for (int i = 0; i < 28; i++)
         {
             for (int j = 0; j < 28; j++) {
-                System.out.println(inputSingle[0][i][j]+"|");
+                System.out.print(inputSingle[0][i][j]+"|");
             }
             System.out.println("|\n");
-        }*/
+        }
 
         float[][] result = (float[][]) myCnn.compute(inputSingle);
 
@@ -237,8 +193,43 @@ public class Reconnaissance extends Activity {
         return answer_val;
     }
 
-    //return crooped bitmp whose containing the number written
-    //Care about nothing in the draw area
+
+    //Get bitmap from view
+    public static Bitmap getBitmapFromView(View view) {
+        Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(),Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(returnedBitmap);
+        Drawable bgDrawable =view.getBackground();
+        if (bgDrawable!=null)
+            bgDrawable.draw(canvas);
+        else
+            canvas.drawColor(Color.WHITE);
+        view.draw(canvas);
+        return returnedBitmap;
+    }
+
+    private void compute()
+    {
+        View zoneDeDessin = findViewById(R.id.zoneDeDessin);
+        bmp = getBitmapFromView(zoneDeDessin);
+        //bmp = cropNumber(bmp);
+        //Bitmap resizeBmp = Bitmap.createBitmap(bmp,0,0,zoneDeDessin.getWidth(),zoneDeDessin.getHeight());
+        Bitmap newBmp = Bitmap.createScaledBitmap(bmp,28,28,false);
+        //creerImage(bmp);
+        int result=-1;
+        try
+        {
+            result=analysis(newBmp);
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("result_int",result);
+            setResult(Activity.RESULT_OK, resultIntent);
+            finish();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     private Bitmap cropNumber(Bitmap bmp)
     {
         bmpCoord topLeft = getTopLeftCoord(bmp);
@@ -264,7 +255,7 @@ public class Reconnaissance extends Activity {
         {
             for (int j = 0; j < height; j++)
             {
-                if ((red(bmp.getPixel(i, j))) < 128)
+                if ((red(bmp.getPixel(i, j))) < 10)
                 {
                     System.out.println(i +" - "+j +"-> " + red(bmp.getPixel(i, j)));
                     left = i;
@@ -326,17 +317,5 @@ public class Reconnaissance extends Activity {
             }
         }
         return new bmpCoord(right,bottom);
-    }
-
-    public static Bitmap getBitmapFromView(View view) {
-        Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(),Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(returnedBitmap);
-        Drawable bgDrawable =view.getBackground();
-        if (bgDrawable!=null)
-            bgDrawable.draw(canvas);
-        else
-            canvas.drawColor(Color.WHITE);
-        view.draw(canvas);
-        return returnedBitmap;
     }
 }

@@ -3,12 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.miage.master.myapplication.utils.CustomGridView
-        android:id="@+id/customGridView"
+    <com.miage.master.myapplication.utils.CustomGridViewGraphic
+        android:id="@+id/customGridViewGraphic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:horizontalSpacing="0dp"
         android:numColumns="9"
-        android:verticalSpacing="0dp" />
-
+        android:verticalSpacing="0dp"
+        android:tag="@string/graphic_tag"/>
 </RelativeLayout>

@@ -9,6 +9,8 @@ import android.graphics.Path;
 import android.view.MotionEvent;
 import android.view.View;
 
+import static android.graphics.Bitmap.createScaledBitmap;
+
 public class ZoneDeDessin extends View {
 
     private Path drawPath;
@@ -64,5 +66,10 @@ public class ZoneDeDessin extends View {
         }
         invalidate();
         return true;
+    }
+
+    public Bitmap getScaledCanvasBitmap()
+    {
+        return createScaledBitmap(canvasBitmap,28,28,true);
     }
 }

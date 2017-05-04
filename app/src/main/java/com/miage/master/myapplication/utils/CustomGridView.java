@@ -24,7 +24,7 @@ public class CustomGridView extends GridView {
      * @param context
      * @param attrs
      */
-    public CustomGridView(Context context, AttributeSet attrs) {
+    public CustomGridView(final Context context, final AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
 
