@@ -26,9 +26,9 @@ public class Case extends CustomViewCase {
 
     //Chaque case est un paint
     private Paint mPaint;
+    private Canvas canvas;
 
     /**
-     *
      * @param context
      * @param id
      */
@@ -39,11 +39,12 @@ public class Case extends CustomViewCase {
     }
 
     /**
-     * @param canvas
+     * @param canv
      */
     @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+    protected void onDraw(Canvas canv) {
+        super.onDraw(canv);
+        this.canvas = canv;
 
         dessineFonds(canvas);
         dessineLignes(canvas);
@@ -54,6 +55,7 @@ public class Case extends CustomViewCase {
     /**
      * Cette méthode permet de dessiner les chiffres dans les cases du sudoku,
      * elle est appelée en dernier car les chiffres sont écrit au premier plan.
+     *
      * @param canvas
      */
     private void dessineChiffre(Canvas canvas) {
@@ -78,6 +80,7 @@ public class Case extends CustomViewCase {
 
     /**
      * Cette méthode permet de dessiner les contours de chaque case.
+     *
      * @param canvas
      */
     private void dessineLignes(Canvas canvas) {
@@ -91,11 +94,12 @@ public class Case extends CustomViewCase {
     /**
      * Cette méthode permet de colorier le fonds des cases du sudoku,
      * elle est appelée en premier car le fonds est au second plan.
+     *
      * @param canvas
      */
     private void dessineFonds(Canvas canvas) {
 
-        //On place le tableau dans une list pour la parcourir en fonction de l'id en suivant.
+        //On place le tableau dans une liste pour la parcourir en fonction de l'id en suivant.
         List<Integer> tabId = new ArrayList<Integer>();
         for (int i = 0; i < tabID.length; i++) {
             tabId.add(tabID[i]);
@@ -105,9 +109,5 @@ public class Case extends CustomViewCase {
         if (tabId.contains(id)) {
             canvas.drawColor(getResources().getColor(R.color.fondGrille));
         }
-
-        /*if (!getModifiable()) {
-            canvas.drawColor(getResources().getColor(R.color.fondGrille));
-        }*/
     }
 }

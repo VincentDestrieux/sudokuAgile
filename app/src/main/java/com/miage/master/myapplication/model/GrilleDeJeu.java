@@ -11,10 +11,9 @@ public class GrilleDeJeu {
 
     //On créé un tableau de Case représentant notre grille de sudoku
     private Case[][] sudoku = new Case[9][9];
-    private Context context;
+    private static Context context;
 
     /**
-     *
      * @param context
      */
     public GrilleDeJeu(Context context) {
@@ -32,7 +31,6 @@ public class GrilleDeJeu {
     }
 
     /**
-     *
      * @param grille
      */
     public void setGrilleDeJeu(int[][] grille) {
@@ -53,7 +51,6 @@ public class GrilleDeJeu {
     }
 
     /**
-     *
      * @return
      */
     public Case[][] getGrilleDeJeu() {
@@ -61,7 +58,6 @@ public class GrilleDeJeu {
     }
 
     /**
-     *
      * @param position_X
      * @param position_Y
      * @param chiffre
@@ -71,7 +67,6 @@ public class GrilleDeJeu {
     }
 
     /**
-     *
      * @param x
      * @param y
      * @return
@@ -81,7 +76,6 @@ public class GrilleDeJeu {
     }
 
     /**
-     *
      * @param cursor
      * @return
      */
@@ -90,6 +84,19 @@ public class GrilleDeJeu {
         int y_pos = cursor / 9;
 
         return sudoku[x_pos][y_pos];
+    }
+
+    public Case[][] getSudoku() {
+        return sudoku;
+    }
+
+    public static Context getContext() {
+        return context;
+    }
+
+
+    public void setSudoku(Case[][] sudoku) {
+        this.sudoku = sudoku;
     }
 
 }

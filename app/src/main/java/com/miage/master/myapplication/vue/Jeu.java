@@ -2,6 +2,7 @@ package com.miage.master.myapplication.vue;
 
 import android.app.Activity;
 import android.content.Context;
+import android.widget.Toast;
 
 import com.miage.master.myapplication.model.GrilleDeJeu;
 import com.miage.master.myapplication.service.GenerationGrille;
@@ -10,9 +11,9 @@ import com.miage.master.myapplication.service.GenerationGrille;
  * Created by Vincent  Destrieux on 13/04/2017.
  * Classe représentant la zone de jeu du sudoku
  */
-public class Jeu  extends Activity{
+public class Jeu extends Activity {
     private static Jeu jeu;
-    private int [][]sudoku;
+    private int[][] sudoku;
     private GrilleDeJeu grid = null;
 
     private int position_X = -1, position_Y = -1;
@@ -54,16 +55,16 @@ public class Jeu  extends Activity{
                 sudoku = GenerationGrille.getInstance().genereGrille(5);
                 break;
         }
-
-      /*int[][] sudoku = {{0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 4, 7, 6, 9, 1, 8, 2, 0},
-                {0, 3, 0, 0, 0, 0, 0, 4, 0},
-                {0, 6, 0, 3, 0, 2, 0, 7, 0},
-                {0, 8, 0, 0, 7, 0, 0, 6, 0},
-                {0, 2, 0, 1, 0, 5, 0, 3, 0},
-                {0, 9, 0, 0, 0, 0, 0, 8, 0},
-                {0, 7, 6, 8, 1, 4, 9, 5, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0}};*/
+        /*
+        int[][] sudoku = {{2, 5, 9, 7, 8, 6, 4, 3, 1},
+                {7, 8, 3, 4, 1, 9, 6, 5, 2},
+                {6, 1, 4, 5, 2, 3, 8, 7, 9},
+                {1, 6, 2, 3, 5, 0, 9, 8, 7},
+                {4, 9, 5, 1, 7, 8, 2, 6, 3},
+                {3, 7, 8, 9, 6, 2, 1, 4, 5},
+                {5, 2, 7, 8, 4, 1, 3, 9, 6},
+                {8, 3, 6, 2, 9, 7, 5, 1, 4},
+                {9, 4, 1, 6, 3, 5, 7, 0, 0}};*/
 
         grid = new GrilleDeJeu(context);
         grid.setGrilleDeJeu(sudoku);
@@ -94,55 +95,33 @@ public class Jeu  extends Activity{
     public void setChiffre(int chiffre) {
         boolean correct = true;
         GenerationGrille g = new GenerationGrille();
-         sudoku = new int[9][9];
+        sudoku = new int[9][9];
 
         if (chiffre != 0) {
-
-
             for (int x = 0; x < 9; x++)
                 for (int y = 0; y < 9; y++) {
                     sudoku[x][y] = grid.getItem(x, y).getValeur();
-
                 }
 
-            if (g.checkInsertionLigne(sudoku, chiffre, position_Y) == true) {
-                System.out.println("Bon trou en ligne");
-            } else {
-                System.out.println("Mauvais trou en ligne");
-                correct = false;
-            }
-            if (g.checkInsertionColonne(sudoku, chiffre, position_X) == true && correct == true) {
-                System.out.println("Bon trou en colonne");
-            } else {
-                System.out.println("Mauvais trou en colonne");
-                correct = false;
-
-            }
-
-            if (g.checkInsertionCarre(sudoku, position_X, position_Y, chiffre) == false && correct == true) {
-                System.out.println("Bon trou en Carre");
-
-            } else {
-                System.out.println("Mauvais trou en Carre");
+            if (!g.checkInsertionLigne(sudoku, chiffre, position_Y) || !g.checkInsertionColonne(sudoku, chiffre, position_X) || !g.checkInsertionCarre(sudoku, position_X, position_Y, chiffre)) {
+                Toast.makeText(GrilleDeJeu.getContext(), "Saisie Incorrecte", Toast.LENGTH_SHORT).show();
                 correct = false;
             }
 
             if (correct == true) {
                 grid.setItem(position_X, position_Y, chiffre);
-
             }
 
         } else if (chiffre == 0) {
             grid.setItem(position_X, position_Y, chiffre);
         }
+        //Actualisation de la grille
         for (int x = 0; x < 9; x++)
             for (int y = 0; y < 9; y++) {
                 sudoku[x][y] = grid.getItem(x, y).getValeur();
-
             }
-        //checkGame(sudoku);
-
     }
+
     public boolean checkGame() {
         sudoku = new int[9][9];
         for (int x = 0; x < 9; x++)
@@ -151,11 +130,10 @@ public class Jeu  extends Activity{
 
             }
         int i, j;
-        boolean complete = true;
         for (i = 0; i < 9; i++) {
             for (j = 0; j < 9; j++) {
                 if (sudoku[i][j] == 0)
-                    return  false;
+                    return false;
             }
         }
         return true;
