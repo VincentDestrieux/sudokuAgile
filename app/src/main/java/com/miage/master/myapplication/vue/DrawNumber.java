@@ -3,7 +3,6 @@ package com.miage.master.myapplication.vue;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -219,9 +218,12 @@ public class DrawNumber extends Activity {
         try
         {
             result=analysis(newBmp);
-            Intent resultIntent = new Intent();
-            resultIntent.putExtra("result_int",result);
-            setResult(Activity.RESULT_OK, resultIntent);
+            Jeu.getJeu().setChiffre(result);
+            //Intent resultIntent = new Intent(DrawNumber.this, CustomGridViewGraphic.class);
+            //resultIntent.putExtra("result_int",result);
+            //setResult(Activity.RESULT_OK, resultIntent);
+            //System.out.println("send value : " + result);
+            //sendBroadcast(resultIntent);
             finish();
         }
         catch(Exception e)

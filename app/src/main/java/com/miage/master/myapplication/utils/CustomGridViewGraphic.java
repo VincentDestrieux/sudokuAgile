@@ -1,9 +1,7 @@
 package com.miage.master.myapplication.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,35 +15,27 @@ import com.miage.master.myapplication.vue.Jeu;
 
 public class CustomGridViewGraphic extends CustomGridView
 {
-    //Internal class for calling StartActivityForResult
-    public class Utils extends Activity{
-        int value;
-
-        @Override
-        public void onCreate(Bundle savedInstanceState)
+    //throwing value
+    /*public class DrawReceiver extends BroadcastReceiver
+    {
+        public void onReceive(Context DrContext, Intent DrIntent)
         {
-            super.onCreate(savedInstanceState);
+            int value = DrIntent.getIntExtra("result_int",0);
+            if(value>0)
+                Jeu.getJeu().setChiffre(value);
         }
+    }*/
 
-        public void getDrawValue()
+    /*private BroadcastReceiver receiver = new BroadcastReceiver(){
+
+        public void onReceive(Context DrContext, Intent DrIntent)
         {
-            Intent i = new Intent(this, DrawNumber.class);
-            startActivityForResult(i, 1);
+            System.out.println("received");
+            int value = DrIntent.getIntExtra("result_int",0);
+            if(value>0)
+                Jeu.getJeu().setChiffre(value);
         }
-
-        @Override
-        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            // Check which request we're responding to
-            if (requestCode == 1) {
-                // Make sure the request was successful
-                if (resultCode == RESULT_OK) {
-                    value = data.getIntExtra("result_int",0);
-                    if(value>0)
-                        Jeu.getJeu().setChiffre(value);
-                }
-            }
-        }
-    }
+    };*/
 
     public CustomGridViewGraphic(final Context context, final AttributeSet attrs)
     {
@@ -60,8 +50,8 @@ public class CustomGridViewGraphic extends CustomGridView
             }
 
             public void openDialog(View view) {
-                Intent open = new Intent(view.getContext(), DrawSwap.class);
-                //Intent open = new Intent(context, DrawNumber.class);
+                //Intent open = new Intent(view.getContext(), DrawSwap.class);
+                Intent open = new Intent(view.getContext(), DrawNumber.class);
                 //view.getContext().startActivity(open);
                 context.startActivity(open);
                 //myActivity.startTest();
